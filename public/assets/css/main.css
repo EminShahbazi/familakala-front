@@ -1,0 +1,47 @@
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/YekanBakhFaNumThin.eot");
+  src: url("../fonts/YekanBakhFaNumThin.eot?#iefix") format("embedded-opentype"), url("../fonts/YekanBakhFaNumThin.woff2") format("woff2"), url("../fonts/YekanBakhFaNumThin.woff") format("woff"), url("../fonts/YekanBakhFaNumThin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/YekanBakhFaNumLight.eot");
+  src: url("../fonts/YekanBakhFaNumLight.eot?#iefix") format("embedded-opentype"), url("../fonts/YekanBakhFaNumLight.woff2") format("woff2"), url("../fonts/YekanBakhFaNumLight.woff") format("woff"), url("../fonts/YekanBakhFaNumLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: 400;
+  font-weight: 400;
+  src: url("../fonts/YekanBakhFaNumRegular.eot");
+  src: url("../fonts/YekanBakhFaNumRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/YekanBakhFaNumRegular.woff2") format("woff2"), url("../fonts/YekanBakhFaNumRegular.woff") format("woff"), url("../fonts/YekanBakhFaNumRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/YekanBakhFaNumMedium.eot");
+  src: url("../fonts/YekanBakhFaNumMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/YekanBakhFaNumMedium.woff2") format("woff2"), url("../fonts/YekanBakhFaNumMedium.woff") format("woff"), url("../fonts/YekanBakhFaNumMedium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/YekanBakhFaNumBold.eot");
+  src: url("../fonts/YekanBakhFaNumBold.eot?#iefix") format("embedded-opentype"), url("../fonts/YekanBakhFaNumBold.woff2") format("woff2"), url("../fonts/YekanBakhFaNumBold.woff") format("woff"), url("../fonts/YekanBakhFaNumBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: YekanBakh;
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/YekanBakhFaNumHeavy.eot");
+  src: url("../fonts/YekanBakhFaNumHeavy.eot?#iefix") format("embedded-opentype"), url("../fonts/YekanBakhFaNumHeavy.woff2") format("woff2"), url("../fonts/YekanBakhFaNumHeavy.woff") format("woff"), url("../fonts/YekanBakhFaNumHeavy.ttf") format("truetype");
+}
