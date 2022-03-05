@@ -517,9 +517,9 @@ progress {
 }
 
 .topbar {
+  padding: 1.5rem;
   background-color: #f0f4f8;
   color: #8e9092;
   text-align: center;
-  line-height: 60px;
   font-weight: 700;
 }
