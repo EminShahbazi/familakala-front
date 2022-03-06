@@ -111,3 +111,33 @@
     text-align: center;
     line-height: 30px;
 }
+
+.site-header__search {
+    margin-top: 10px;
+}
+
+.site-search {
+    display: flex;
+    align-items: center;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    background: #f0f4f8;
+    border-radius: 36px;
+}
+
+.site-search__input {
+    flex-grow: 1;
+    border: 0;
+    background-color: transparent;
+    text-align: center;
+    color: #a6bcd0;
+    &::placeholder {
+        color: inherit;
+    }
+}
+.site-search__icon {
+    color: #adc1d3;
+    flex-shrink: 0;
+    font-size: 18px;
+}

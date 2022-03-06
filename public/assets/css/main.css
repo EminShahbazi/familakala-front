@@ -354,6 +354,7 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  outline: 0;
 }
 
 button,
@@ -513,6 +514,10 @@ progress {
 
 .icon-menu:before {
   content: "\e902";
+}
+
+.icon-search:before {
+  content: "\e903";
 }
 
 .container {
@@ -698,4 +703,59 @@ progress {
   color: #ffffff;
   text-align: center;
   line-height: 30px;
+}
+
+.site-header__search {
+  margin-top: 10px;
+}
+
+.site-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  background: #f0f4f8;
+  border-radius: 36px;
+}
+
+.site-search__input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border: 0;
+  background-color: transparent;
+  text-align: center;
+  color: #a6bcd0;
+}
+
+.site-search__input::-webkit-input-placeholder {
+  color: inherit;
+}
+
+.site-search__input::-moz-placeholder {
+  color: inherit;
+}
+
+.site-search__input:-ms-input-placeholder {
+  color: inherit;
+}
+
+.site-search__input::-ms-input-placeholder {
+  color: inherit;
+}
+
+.site-search__input::placeholder {
+  color: inherit;
+}
+
+.site-search__icon {
+  color: #adc1d3;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-size: 18px;
 }
