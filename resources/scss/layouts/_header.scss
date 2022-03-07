@@ -144,8 +144,40 @@
 
 .site-header__cats {
     display: flex;
-    margin-top: 2rem;
     justify-content: center;
+    margin: 2rem auto 0;
+
+    .header-cat__title {
+        &.open {
+            display: block;
+        }
+        &.close {
+            display: none;
+        }
+    }
+
+    &.show-all {
+        flex-wrap: wrap;
+        max-width: 812px;
+
+        .header-cat {
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .header-cat__title {
+            &.open {
+                display: none;
+            }
+            &.close {
+                display: block;
+            }
+        }
+
+        .header-cat-btn .header-cat__image {
+            transform: rotate(180deg);
+        }
+    }
 }
 
 .header-cat {
@@ -191,6 +223,10 @@
             background: $white;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
         }
+
+        &:nth-child(-n + 4) {
+            display: none;
+        }
     }
 
     &:hover {
@@ -203,11 +239,27 @@
         &:nth-child(-n + 4) {
             display: block;
         }
+
+        &.header-cat-btn:nth-child(-n + 5) {
+            display: none;
+        }
     }
 
     @include mediaAbove(md) {
-        &:nth-child(-n + 7) {
+        &:nth-child(-n + 5) {
             display: block;
+        }
+        &.header-cat-btn:nth-child(-n + 6) {
+            display: none;
+        }
+    }
+
+    @include mediaAbove(lg) {
+        &:nth-child(-n + 6) {
+            display: block;
+        }
+        &.header-cat-btn:nth-child(-n + 7) {
+            display: none;
         }
     }
 }

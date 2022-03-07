@@ -53,7 +53,7 @@
                         />
                     </form>
                 </nav>
-                <nav class="site-header__cats">
+                <nav class="site-header__cats" id="js-header-cats">
                     <a href="" class="header-cat">
                         <div class="header-cat__image">
                             <img src="/media/gaz.png" alt="اجاق گاز" />
@@ -84,16 +84,42 @@
                         </div>
                         <div class="header-cat__title">هود</div>
                     </a>
-                    <div class="header-cat header-cat-btn">
+                    <a href="" class="header-cat">
+                        <div class="header-cat__image">
+                            <img src="/media/sink.png" alt="سینک" />
+                        </div>
+                        <div class="header-cat__title">سینک</div>
+                    </a>
+                    <a href="" class="header-cat">
+                        <div class="header-cat__image">
+                            <img src="/media/gaz.png" alt="اجاق گاز" />
+                        </div>
+                        <div class="header-cat__title">اجاق گاز</div>
+                    </a>
+                    <a href="" class="header-cat">
+                        <div class="header-cat__image">
+                            <img src="/media/hood.png" alt="هود" />
+                        </div>
+                        <div class="header-cat__title">هود</div>
+                    </a>
+                    <!-- if cat's count > 4 -->
+                    <div
+                        class="header-cat header-cat-btn"
+                        id="js-header-cats-toggler"
+                        role="button"
+                    >
                         <div class="header-cat__image">
                             <i class="icon icon-arrow-right"></i>
                         </div>
-                        <div class="header-cat__title">همه</div>
+                        <div class="header-cat__title open">همه</div>
+                        <div class="header-cat__title close">بستن</div>
                     </div>
+                    <!-- endif; -->
                 </nav>
             </div>
         </header>
 
+        <script src="assets/js/jquery-3.6.0.js"></script>
         <script src="assets/js/main.js"></script>
     </body>
 </html>
