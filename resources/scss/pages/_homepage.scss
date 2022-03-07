@@ -51,6 +51,10 @@
     @include mediaAbove(sm) {
         display: block;
     }
+
+    &.slick-disabled {
+        display: none;
+    }
 }
 
 .discounts-slider-prev {

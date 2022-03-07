@@ -1346,6 +1346,11 @@ progress {
   }
 }
 
+.discounts-slider-prev.slick-disabled,
+.discounts-slider-next.slick-disabled {
+  display: none;
+}
+
 .discounts-slider-prev {
   right: -1rem;
   border-top-left-radius: 5px;
