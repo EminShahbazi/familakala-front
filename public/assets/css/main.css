@@ -569,6 +569,10 @@ progress {
 
 .site-header {
   padding: 2rem 0;
+  border-bottom-right-radius: 36px;
+  border-bottom-left-radius: 36px;
+  -webkit-box-shadow: 0 8px 8px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 8px 8px rgba(0, 0, 0, 0.05);
 }
 
 .site-header__main {
