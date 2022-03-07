@@ -1,0 +1,22 @@
+.section {
+    position: relative;
+    margin: 60px 0;
+}
+
+.section__heading {
+    display: flex;
+    justify-content: space-between;
+    @include margin-bottom(1.875rem);
+}
+
+.section__more {
+    &::after {
+        content: "\e904";
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 2px;
+        font-family: FamilaIcons;
+        font-size: 12px;
+        vertical-align: middle;
+    }
+}

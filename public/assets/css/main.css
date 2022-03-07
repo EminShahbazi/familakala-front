@@ -677,6 +677,37 @@ progress {
   content: "\e904";
 }
 
+.section {
+  position: relative;
+  margin: 60px 0;
+}
+
+.section__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: calc(1.3125rem + 0.75vw);
+}
+
+@media (min-width: 1200px) {
+  .section__heading {
+    margin-bottom: 1.875rem;
+  }
+}
+
+.section__more::after {
+  content: "\e904";
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 2px;
+  font-family: FamilaIcons;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
 .container {
   width: 90%;
   margin: 0 auto;
