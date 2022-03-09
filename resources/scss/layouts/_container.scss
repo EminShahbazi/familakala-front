@@ -1,6 +1,7 @@
 .container {
     width: 90%;
     margin: 0 auto;
+    padding: 0 ($gutter/2);
 
     @include mediaAbove(sm) {
         width: 540px;

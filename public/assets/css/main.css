@@ -1420,6 +1420,7 @@ progress {
 .container {
   width: 90%;
   margin: 0 auto;
+  padding: 0 0.5rem;
 }
 
 @media (min-width: 576px) {
