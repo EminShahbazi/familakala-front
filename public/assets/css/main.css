@@ -235,12 +235,12 @@ sup {
 }
 
 a {
-  color: #108dd0;
+  color: #3497fd;
   text-decoration: none;
 }
 
 a:hover {
-  color: #0d71a6;
+  color: #2a79ca;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -640,7 +640,7 @@ progress {
 }
 
 .slick-dots li.slick-active button {
-  background: #108dd0;
+  background: #3497fd;
   opacity: 1;
 }
 
@@ -683,6 +683,18 @@ progress {
 
 .icon-arrow-right:before {
   content: "\e906";
+}
+
+.icon-genuine:before {
+  content: "\e907";
+}
+
+.icon-transfer:before {
+  content: "\e908";
+}
+
+.icon-truck:before {
+  content: "\e909";
 }
 
 .section {
@@ -741,7 +753,7 @@ progress {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #108dd0;
+  background-color: #3497fd;
   border-bottom-right-radius: 5px;
   color: #ffffff;
   padding: 20px 5px;
@@ -917,7 +929,7 @@ progress {
 
 .mobile-menu-toggler {
   padding: 5px 14px;
-  background-color: #108dd0;
+  background-color: #3497fd;
   color: #ffffff;
   font-size: 1rem;
   border-radius: 10px;
@@ -1037,7 +1049,7 @@ progress {
   height: 30px;
   border-radius: 50%;
   overflow: hidden;
-  background-color: #108dd0;
+  background-color: #3497fd;
   font-size: 1rem;
   color: #ffffff;
   text-align: center;
@@ -1197,7 +1209,7 @@ progress {
 }
 
 .header-cat:hover.header-cat__title {
-  color: #108dd0;
+  color: #3497fd;
 }
 
 @media (min-width: 576px) {
@@ -1242,7 +1254,7 @@ progress {
 .header-cat__image .icon {
   font-size: 28px;
   line-height: inherit;
-  color: #108dd0;
+  color: #3497fd;
 }
 
 @media (min-width: 576px) {
@@ -1361,4 +1373,78 @@ progress {
   left: -1rem;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+.services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.services__item {
+  display: block;
+  max-width: 800px;
+  text-align: center;
+}
+
+.services__item:not(:last-child) {
+  margin-left: 1rem;
+}
+
+.services__item .icon-wrapper {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #3497fd;
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 2.8;
+  -webkit-box-shadow: 0px 8px 15px #108dd0;
+          box-shadow: 0px 8px 15px #108dd0;
+}
+
+.services__item .term {
+  margin-top: 1rem;
+  color: #748a9d;
+  font-size: 0.875rem;
+}
+
+.services__item .term::after {
+  content: "\e904";
+  font-family: FamilaIcons;
+  display: inline-block;
+  font-size: 0.75rem;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+@media (min-width: 576px) {
+  .services__item:not(:last-child) {
+    margin-left: 60px;
+  }
+  .services__item .icon-wrapper {
+    width: 86px;
+    height: 86px;
+    font-size: 34px;
+    line-height: 3.2;
+  }
+  .services__item .term {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 768px) {
+  .services__item:not(:last-child) {
+    margin-left: 60px;
+  }
+  .services__item .icon-wrapper {
+    width: 106px;
+    height: 106px;
+    font-size: 40px;
+  }
 }
