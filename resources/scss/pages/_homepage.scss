@@ -139,3 +139,57 @@
         }
     }
 }
+
+// Categories
+.homecat {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px rgba($black, 0.1);
+
+    &:hover {
+        .homecat__image {
+            transform: scale(1.1);
+        }
+        .homecat__info {
+            background-color: $primary-color;
+            color: $white;
+        }
+    }
+}
+
+.homecat__image {
+    width: 100%;
+    transition: transform 0.7s ease;
+    img {
+        width: 100%;
+    }
+}
+
+.homecat__info {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    padding: 0.5rem 1.5rem;
+    background-color: rgba($white, 0.5);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: #07284a;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.homecat__title {
+    margin: 0;
+}
+
+.homecat__subtitle {
+    &::after {
+        content: "\e904";
+        font-family: FamilaIcons;
+
+        display: inline-block;
+        font-size: 0.6rem;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+}

@@ -1,0 +1,28 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -($gutter/2);
+    margin-right: -($gutter/2);
+}
+
+.col {
+    flex-shrink: 0;
+    padding: ($gutter/2);
+}
+
+@for $i from 1 through $grid-columns {
+    .col-#{$i} {
+        @include makeCol($i);
+    }
+}
+
+@each $breakpoint, $size in $breakpoints {
+    @include mediaAbove($breakpoint) {
+        @for $i from 1 through $grid-columns {
+            .col-#{$breakpoint}-#{$i} {
+                // width: percentage($i/$grid-columns);
+                @include makeCol($i);
+            }
+        }
+    }
+}
