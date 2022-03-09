@@ -3,22 +3,22 @@
     margin: 0 auto;
 
     @include mediaAbove(sm) {
-        max-width: 540px;
+        width: 540px;
     }
 
     @include mediaAbove(md) {
-        max-width: 720px;
+        width: 720px;
     }
 
     @include mediaAbove(lg) {
-        max-width: 992px;
+        width: 960px;
     }
 
     @include mediaAbove(xl) {
-        max-width: 1140px;
+        width: 1140px;
     }
 
     @include mediaAbove(xxl) {
-        max-width: 1320px;
+        width: 1320px;
     }
 }
