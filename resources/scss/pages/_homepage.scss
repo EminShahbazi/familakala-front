@@ -364,3 +364,41 @@
         }
     }
 }
+
+// Colleagues Gallery
+.colleagues-gallery-slider {
+    .slide {
+        padding: 1rem;
+    }
+}
+
+.colleague {
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 10px 15px rgba(#1b1c20, 0.1);
+}
+
+.colleague__image {
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+}
+
+.colleague__info {
+    padding: 20px;
+}
+
+.colleague__name {
+    font-size: 19px;
+    font-weight: $font-weight-medium;
+    margin-bottom: 0;
+}
+
+.colleague__profession {
+    height: 48px;
+    margin: 1rem 0 0.5rem;
+    overflow: hidden;
+}

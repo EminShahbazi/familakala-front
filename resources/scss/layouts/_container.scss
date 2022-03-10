@@ -5,6 +5,7 @@
 
     &.container-md {
         width: 100%;
+        padding: 0;
     }
 
     @include mediaAbove(sm) {
@@ -16,6 +17,7 @@
 
         &.container-md {
             width: 720px;
+            padding: 0 ($gutter/2);
         }
     }
 
@@ -24,6 +26,7 @@
 
         &.container-md {
             width: 960px;
+            padding: 0 ($gutter/2);
         }
     }
 
@@ -32,6 +35,7 @@
 
         &.container-md {
             width: 1140px;
+            padding: 0 ($gutter/2);
         }
     }
 
@@ -40,6 +44,7 @@
 
         &.container-md {
             width: 1320px;
+            padding: 0 ($gutter/2);
         }
     }
 }
