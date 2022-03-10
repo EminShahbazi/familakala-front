@@ -1247,6 +1247,10 @@ progress {
   content: "\e909";
 }
 
+.icon-business:before {
+  content: "\e90a";
+}
+
 .section {
   position: relative;
   margin: 60px 0;
@@ -1276,6 +1280,10 @@ progress {
   font-family: FamilaIcons;
   font-size: 12px;
   vertical-align: middle;
+}
+
+.section--gray {
+  background-color: #f6f6f6;
 }
 
 .product {
@@ -2132,4 +2140,128 @@ progress {
 
 .best-product__attributes li .value {
   font-weight: 500;
+}
+
+.colleagues-guide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 40px 0;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #07284a;
+}
+
+@media (min-width: 576px) {
+  .colleagues-guide {
+    padding: 60px 0;
+  }
+}
+
+.colleagues-guide__heading p {
+  font-size: 0.875rem;
+  max-width: 350px;
+  margin-top: 30px;
+}
+
+.colleagues-guide__heading h3 {
+  font-size: 1.2rem;
+}
+
+.colleagues-guide__heading h3 .icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  color: #3497fd;
+  font-size: 1.4em;
+  text-shadow: 0 10px 10px rgba(0, 0, 0, 0.16);
+}
+
+@media (min-width: 576px) {
+  .colleagues-guide__heading h3 {
+    font-size: 1.4rem;
+  }
+  .colleagues-guide__heading p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .colleagues-guide__heading h3 {
+    font-size: 1.8rem;
+  }
+  .colleagues-guide__heading p {
+    font-size: 1.5rem;
+  }
+}
+
+.colleagues-guide__divider {
+  width: 1px;
+  height: 100px;
+  margin: 0 1rem;
+  background-color: #232323;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+@media (min-width: 576px) {
+  .colleagues-guide__divider {
+    height: 120px;
+    margin: 0 2rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .colleagues-guide__divider {
+    height: 140px;
+  }
+}
+
+.colleagues-guide__more {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.colleagues-guide__more .icon {
+  font-size: 1.8rem;
+}
+
+.colleagues-guide__more .link {
+  font-size: 0.875rem;
+  margin-top: 30px;
+}
+
+.colleagues-guide__more .link a {
+  color: inherit;
+}
+
+.colleagues-guide__more .link a::after {
+  content: "\e904";
+  font-family: FamilaIcons;
+  display: inline-block;
+  font-size: 0.6em;
+  vertical-align: middle;
+  margin-right: 0.875rem;
+}
+
+@media (min-width: 576px) {
+  .colleagues-guide__more .icon {
+    font-size: 3rem;
+  }
+  .colleagues-guide__more .link {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .colleagues-guide__more .icon {
+    font-size: 4rem;
+  }
+  .colleagues-guide__more .link {
+    font-size: 1.5rem;
+  }
 }
