@@ -1,7 +1,11 @@
 .container {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     padding: 0 ($gutter/2);
+
+    &.container-md {
+        width: 100%;
+    }
 
     @include mediaAbove(sm) {
         width: 540px;
@@ -9,17 +13,33 @@
 
     @include mediaAbove(md) {
         width: 720px;
+
+        &.container-md {
+            width: 720px;
+        }
     }
 
     @include mediaAbove(lg) {
         width: 960px;
+
+        &.container-md {
+            width: 960px;
+        }
     }
 
     @include mediaAbove(xl) {
         width: 1140px;
+
+        &.container-md {
+            width: 1140px;
+        }
     }
 
     @include mediaAbove(xxl) {
         width: 1320px;
+
+        &.container-md {
+            width: 1320px;
+        }
     }
 }

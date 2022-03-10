@@ -1418,9 +1418,13 @@ progress {
 }
 
 .container {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   padding: 0 0.5rem;
+}
+
+.container.container-md {
+  width: 100%;
 }
 
 @media (min-width: 576px) {
@@ -1433,10 +1437,16 @@ progress {
   .container {
     width: 720px;
   }
+  .container.container-md {
+    width: 720px;
+  }
 }
 
 @media (min-width: 992px) {
   .container {
+    width: 960px;
+  }
+  .container.container-md {
     width: 960px;
   }
 }
@@ -1445,10 +1455,16 @@ progress {
   .container {
     width: 1140px;
   }
+  .container.container-md {
+    width: 1140px;
+  }
 }
 
 @media (min-width: 1400px) {
   .container {
+    width: 1320px;
+  }
+  .container.container-md {
     width: 1320px;
   }
 }
@@ -2054,4 +2070,66 @@ progress {
   font-size: 0.6rem;
   vertical-align: middle;
   margin-right: 5px;
+}
+
+.best-products-slider .slide {
+  padding: 1rem;
+}
+
+.best-product:hover .best-product__image img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.best-product:hover .best-product__attributes li {
+  color: #232323;
+}
+
+.best-product:hover .best-product__attributes li .value {
+  color: #3497fd;
+}
+
+.best-product__image {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.best-product__image img {
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.8s ease;
+  transition: -webkit-transform 0.8s ease;
+  transition: transform 0.8s ease;
+  transition: transform 0.8s ease, -webkit-transform 0.8s ease;
+}
+
+.best-product__attributes {
+  list-style: none;
+  margin-top: -30px;
+  padding: 60px 20px 20px;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 12px;
+}
+
+.best-product__attributes li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #454f63;
+}
+
+.best-product__attributes li:not(:last-child) {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #f4f4f6;
+}
+
+.best-product__attributes li .value {
+  font-weight: 500;
 }
