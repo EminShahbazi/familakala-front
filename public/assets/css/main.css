@@ -2279,8 +2279,8 @@ progress {
   border-radius: 12px;
   overflow: hidden;
   text-align: center;
-  -webkit-box-shadow: 0 10px 15px rgba(27, 28, 32, 0.1);
-          box-shadow: 0 10px 15px rgba(27, 28, 32, 0.1);
+  -webkit-box-shadow: 0 4px 8px rgba(27, 28, 32, 0.1);
+          box-shadow: 0 4px 8px rgba(27, 28, 32, 0.1);
 }
 
 .colleague__image {
