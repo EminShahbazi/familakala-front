@@ -1207,48 +1207,84 @@ progress {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-account:before {
-  content: "\e900";
+.icon-aparat:before {
+  content: "\e90f";
 }
 
-.icon-cart:before {
-  content: "\e901";
+.icon-bubbles:before {
+  content: "\e910";
+}
+
+.icon-comments:before {
+  content: "\e910";
+}
+
+.icon-chat:before {
+  content: "\e910";
+}
+
+.icon-talk:before {
+  content: "\e910";
+}
+
+.icon-phone:before {
+  content: "\e911";
+}
+
+.icon-telephone:before {
+  content: "\e911";
+}
+
+.icon-contact:before {
+  content: "\e911";
+}
+
+.icon-support:before {
+  content: "\e911";
+}
+
+.icon-call:before {
+  content: "\e911";
+}
+
+.icon-location:before {
+  content: "\e912";
+}
+
+.icon-map-marker:before {
+  content: "\e912";
+}
+
+.icon-pin:before {
+  content: "\e912";
+}
+
+.icon-whatsapp:before {
+  content: "\e913";
+}
+
+.icon-brand:before {
+  content: "\e913";
+}
+
+.icon-social:before {
+  content: "\e913";
+}
+
+.icon-instagram:before {
+  content: "\e914";
+}
+
+.icon-brand1:before {
+  content: "\e914";
+}
+
+.icon-social1:before {
+  content: "\e914";
 }
 
 .icon-menu:before {
   content: "\e902";
-}
-
-.icon-search:before {
-  content: "\e903";
-}
-
-.icon-arrow-left:before {
-  content: "\e904";
-}
-
-.icon-star:before {
-  content: "\e905";
-}
-
-.icon-arrow-right:before {
-  content: "\e906";
-}
-
-.icon-genuine:before {
-  content: "\e907";
-}
-
-.icon-transfer:before {
-  content: "\e908";
-}
-
-.icon-truck:before {
-  content: "\e909";
-}
-
-.icon-business:before {
-  content: "\e90a";
 }
 
 .icon-faq:before {
@@ -1265,6 +1301,46 @@ progress {
 
 .icon-trust:before {
   content: "\e90e";
+}
+
+.icon-business:before {
+  content: "\e90a";
+}
+
+.icon-genuine:before {
+  content: "\e907";
+}
+
+.icon-transfer:before {
+  content: "\e908";
+}
+
+.icon-truck:before {
+  content: "\e909";
+}
+
+.icon-star:before {
+  content: "\e905";
+}
+
+.icon-arrow-left:before {
+  content: "\e904";
+}
+
+.icon-arrow-right:before {
+  content: "\e906";
+}
+
+.icon-search:before {
+  content: "\e903";
+}
+
+.icon-account:before {
+  content: "\e900";
+}
+
+.icon-cart:before {
+  content: "\e901";
 }
 
 .rating {
@@ -1878,6 +1954,62 @@ progress {
   .header-cat__title {
     font-size: 1.125rem;
     font-weight: 500;
+  }
+}
+
+.site-footer {
+  padding: 80px 0;
+  background-color: #f0f4f8;
+}
+
+.site-footer .container {
+  max-width: 680px;
+}
+
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__social a {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  text-align: center;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #3497fd;
+  border-radius: 50%;
+  line-height: 2.375;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.footer__social a .icon {
+  line-height: inherit;
+}
+
+.footer__social a:hover {
+  background-color: #8898ab;
+}
+
+@media (min-width: 576px) {
+  .footer__social a {
+    width: 57px;
+    height: 57px;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__social a {
+    width: 80px;
+    height: 80px;
+    font-size: 34px;
   }
 }
 
