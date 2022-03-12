@@ -2480,3 +2480,47 @@ progress {
     font-size: 1.1rem;
   }
 }
+
+.latest-posts h3 {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.latest-posts ul {
+  list-style: none;
+}
+
+.latest-posts ul li {
+  margin-top: 2rem;
+}
+
+.latest-posts ul li a {
+  color: inherit;
+  -webkit-transition: color 0.25s ease;
+  transition: color 0.25s ease;
+}
+
+.latest-posts ul li a::after {
+  content: "\e904";
+  font-family: FamilaIcons;
+  display: inline-block;
+  font-size: 0.75rem;
+  vertical-align: middle;
+  margin-top: -4px;
+  margin-right: 5px;
+  color: #3497fd;
+  -webkit-transition: -webkit-transform 0.25s ease;
+  transition: -webkit-transform 0.25s ease;
+  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+}
+
+.latest-posts ul li a:hover {
+  color: #3497fd;
+}
+
+.latest-posts ul li a:hover::after {
+  margin-right: 8px;
+}
