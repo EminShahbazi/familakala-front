@@ -2742,10 +2742,13 @@ progress {
   }
 }
 
-.latest-posts h3 {
-  text-align: center;
+.latest-posts {
   max-width: 600px;
   margin: 0 auto;
+}
+
+.latest-posts h3 {
+  text-align: center;
   line-height: 1.6;
 }
 

@@ -549,10 +549,11 @@
 
 // Latest Blog Posts
 .latest-posts {
+    max-width: 600px;
+    margin: 0 auto;
+
     h3 {
         text-align: center;
-        max-width: 600px;
-        margin: 0 auto;
         line-height: 1.6;
     }
 
