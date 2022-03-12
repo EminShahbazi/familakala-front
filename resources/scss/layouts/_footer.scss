@@ -108,6 +108,12 @@
     }
 }
 
+.footer__about {
+    margin: 1.5rem 0;
+    line-height: 2;
+    text-align: justify;
+}
+
 @include mediaAbove(sm) {
     .footer__address {
         font-size: 20px;
