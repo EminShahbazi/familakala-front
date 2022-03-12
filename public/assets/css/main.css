@@ -2134,6 +2134,14 @@ progress {
   }
 }
 
+.footer__namad {
+  text-align: center;
+}
+
+.footer__namad img {
+  height: 140px;
+}
+
 .hero-slider-wrapper {
   margin: 30px 0;
 }
