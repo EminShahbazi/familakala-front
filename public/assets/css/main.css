@@ -2029,6 +2029,63 @@ progress {
   font-weight: 500;
 }
 
+.footer__newsletter {
+  padding: 1.5rem 5%;
+  border-radius: 1rem;
+  background-color: #8898ab;
+  text-align: center;
+  color: #ffffff;
+}
+
+.footer__newsletter form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+}
+
+.footer__newsletter form input {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  color: #ffffff;
+}
+
+.footer__newsletter form input[type="text"] {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+}
+
+.footer__newsletter form input[type="text"]::-webkit-input-placeholder {
+  color: #dbe0e6;
+}
+
+.footer__newsletter form input[type="text"]::-moz-placeholder {
+  color: #dbe0e6;
+}
+
+.footer__newsletter form input[type="text"]:-ms-input-placeholder {
+  color: #dbe0e6;
+}
+
+.footer__newsletter form input[type="text"]::-ms-input-placeholder {
+  color: #dbe0e6;
+}
+
+.footer__newsletter form input[type="text"]::placeholder {
+  color: #dbe0e6;
+}
+
+.footer__newsletter form input[type="submit"] {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-right: 1px solid #ffffff;
+}
+
 @media (min-width: 576px) {
   .footer__address {
     font-size: 20px;
@@ -2036,6 +2093,9 @@ progress {
   }
   .footer__phone {
     font-size: 20px;
+  }
+  .footer__newsletter {
+    padding: 20px 10%;
   }
 }
 

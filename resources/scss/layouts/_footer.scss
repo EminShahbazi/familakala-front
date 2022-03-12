@@ -60,6 +60,41 @@
     }
 }
 
+.footer__newsletter {
+    padding: 1.5rem 5%;
+    border-radius: 1rem;
+    background-color: #8898ab;
+    text-align: center;
+    color: $white;
+
+    form {
+        display: flex;
+        border: 1px solid $white;
+        border-radius: 10px;
+
+        input {
+            padding: 0.5rem 1rem;
+            background-color: transparent;
+            border: 0;
+            outline: 0;
+            color: $white;
+
+            &[type="text"] {
+                flex-grow: 1;
+                text-align: center;
+
+                &::placeholder {
+                    color: #dbe0e6;
+                }
+            }
+            &[type="submit"] {
+                flex-shrink: 0;
+                border-right: 1px solid $white;
+            }
+        }
+    }
+}
+
 @include mediaAbove(sm) {
     .footer__address {
         font-size: 20px;
@@ -68,5 +103,8 @@
 
     .footer__phone {
         font-size: 20px;
+    }
+    .footer__newsletter {
+        padding: 20px 10%;
     }
 }
