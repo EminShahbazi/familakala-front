@@ -2086,6 +2086,20 @@ progress {
   border-right: 1px solid #ffffff;
 }
 
+.footer__links {
+  list-style: none;
+  margin: 2rem 0 1rem;
+  text-align: center;
+}
+
+.footer__links li {
+  margin-bottom: 1rem;
+}
+
+.footer__links li a {
+  color: inherit;
+}
+
 @media (min-width: 576px) {
   .footer__address {
     font-size: 20px;
@@ -2096,6 +2110,21 @@ progress {
   }
   .footer__newsletter {
     padding: 20px 10%;
+  }
+  .footer__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0.875rem 0;
+    border-top: 1px solid #707070;
+    border-bottom: 1px solid #707070;
+  }
+  .footer__links li {
+    margin: 0;
+    line-height: 1;
   }
 }
 
