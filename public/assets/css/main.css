@@ -1251,6 +1251,22 @@ progress {
   content: "\e90a";
 }
 
+.icon-faq:before {
+  content: "\e90b";
+}
+
+.icon-cards:before {
+  content: "\e90c";
+}
+
+.icon-newsletter:before {
+  content: "\e90d";
+}
+
+.icon-trust:before {
+  content: "\e90e";
+}
+
 .rating {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2371,5 +2387,96 @@ progress {
   .home-brands__item {
     width: 100px;
     line-height: 100px;
+  }
+}
+
+.proc {
+  padding: 30px 0;
+  border-radius: 40px;
+  text-align: center;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.proc__icon {
+  display: inline-block;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #757575;
+  color: #fff;
+}
+
+.proc__icon .icon-trust {
+  font-size: 24px;
+  line-height: 2.8;
+}
+
+.proc__icon .icon-cards {
+  font-size: 34px;
+  line-height: 1.8;
+}
+
+.proc__icon .icon-newsletter {
+  font-size: 19px;
+  line-height: 3.4;
+}
+
+.proc__icon .icon-faq {
+  font-size: 30px;
+  line-height: 2.2;
+}
+
+.proc__title {
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.proc__text {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 992px) {
+  .proc-image {
+    height: 469px;
+    background-image: url("../images/proc_img.jpg");
+    background-size: cover;
+  }
+  .proc-items {
+    margin-top: -150px;
+  }
+  .proc {
+    border-radius: 88px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-bottom: 0.5rem solid #3497fd;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .proc__icon {
+    width: 100px;
+    height: 100px;
+    font-size: 38px;
+  }
+  .proc__icon .icon-trust {
+    font-size: 34px;
+    line-height: 3;
+  }
+  .proc__icon .icon-cards {
+    font-size: 46px;
+    line-height: 2;
+  }
+  .proc__icon .icon-newsletter {
+    font-size: 29px;
+    line-height: 3.6;
+  }
+  .proc__icon .icon-faq {
+    font-size: 38px;
+    line-height: 2.8;
+  }
+  .proc__title {
+    margin-top: 32px;
+    font-size: 1.1rem;
   }
 }
