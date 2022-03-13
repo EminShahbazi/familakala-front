@@ -1,0 +1,149 @@
+// Colleagues Guide
+.colleagues-guide {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #07284a;
+
+    @include mediaAbove(sm) {
+        padding: 60px 0;
+    }
+}
+.colleagues-guide__heading {
+    p {
+        font-size: 0.875rem;
+        max-width: 350px;
+        margin-top: 30px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+
+        .icon {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 0.5rem;
+            color: $primary-color;
+            font-size: 1.4em;
+            text-shadow: 0 10px 10px rgba($black, 0.16);
+        }
+    }
+
+    @include mediaAbove(sm) {
+        h3 {
+            font-size: 1.4rem;
+        }
+
+        p {
+            font-size: 1.3rem;
+        }
+    }
+
+    @include mediaAbove(md) {
+        h3 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+}
+.colleagues-guide__divider {
+    width: 1px;
+    height: 100px;
+    margin: 0 1rem;
+    background-color: $body-color;
+    align-self: center;
+
+    @include mediaAbove(sm) {
+        height: 120px;
+        margin: 0 2rem;
+    }
+
+    @include mediaAbove(sm) {
+        height: 140px;
+    }
+}
+
+.colleagues-guide__more {
+    flex-shrink: 0;
+    .icon {
+        font-size: 1.8rem;
+    }
+    .link {
+        font-size: 0.875rem;
+        margin-top: 30px;
+        a {
+            color: inherit;
+            &::after {
+                content: "\e904";
+                font-family: FamilaIcons;
+
+                display: inline-block;
+                font-size: 0.6em;
+                vertical-align: middle;
+                margin-right: 0.875rem;
+            }
+        }
+    }
+
+    @include mediaAbove(sm) {
+        .icon {
+            font-size: 3rem;
+        }
+        .link {
+            font-size: 1.3rem;
+        }
+    }
+
+    @include mediaAbove(md) {
+        .icon {
+            font-size: 4rem;
+        }
+        .link {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+// Colleagues Gallery
+.colleagues-gallery-slider {
+    .slide {
+        padding: 1rem;
+    }
+}
+
+.colleague {
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(#1b1c20, 0.1);
+}
+
+.colleague__image {
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+}
+
+.colleague__info {
+    padding: 20px;
+}
+
+.colleague__name {
+    font-size: 19px;
+    font-weight: $font-weight-medium;
+    margin-bottom: 0;
+}
+
+.colleague__profession {
+    height: 48px;
+    margin: 1rem 0 0.5rem;
+    overflow: hidden;
+}

@@ -1,0 +1,69 @@
+.services {
+    display: flex;
+    justify-content: center;
+}
+
+.services__item {
+    display: block;
+    max-width: 800px;
+    text-align: center;
+
+    &:not(:last-child) {
+        margin-left: 1rem;
+    }
+
+    .icon-wrapper {
+        width: 65px;
+        height: 65px;
+        margin: 0 auto;
+        border-radius: 50%;
+        background-color: $primary-color;
+        color: $white;
+        font-size: 30px;
+        line-height: 2.8;
+        box-shadow: 0px 8px 15px rgba(16, 141, 208, 58%);
+    }
+
+    .term {
+        margin-top: 1rem;
+        color: #748a9d;
+        font-size: 0.875rem;
+
+        &::after {
+            content: "\e904";
+            font-family: FamilaIcons;
+
+            display: inline-block;
+            font-size: 0.75rem;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    }
+
+    @include mediaAbove(sm) {
+        &:not(:last-child) {
+            margin-left: 60px;
+        }
+        .icon-wrapper {
+            width: 86px;
+            height: 86px;
+            font-size: 34px;
+            line-height: 3.2;
+        }
+        .term {
+            font-size: 1.1rem;
+            font-weight: $font-weight-medium;
+        }
+    }
+
+    @include mediaAbove(md) {
+        &:not(:last-child) {
+            margin-left: 60px;
+        }
+        .icon-wrapper {
+            width: 106px;
+            height: 106px;
+            font-size: 40px;
+        }
+    }
+}

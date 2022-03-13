@@ -1,0 +1,40 @@
+.latest-posts {
+    max-width: 600px;
+    margin: 0 auto;
+
+    h3 {
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    ul {
+        list-style: none;
+        li {
+            margin-top: 1.5rem;
+            a {
+                color: inherit;
+                transition: color 0.25s ease;
+                &::after {
+                    content: "\e904";
+                    font-family: FamilaIcons;
+
+                    display: inline-block;
+                    font-size: 0.75rem;
+                    vertical-align: middle;
+                    margin-top: -4px;
+                    margin-right: 5px;
+                    color: $primary-color;
+                    transition: transform 0.25s ease;
+                }
+
+                &:hover {
+                    color: $primary-color;
+
+                    &::after {
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+}

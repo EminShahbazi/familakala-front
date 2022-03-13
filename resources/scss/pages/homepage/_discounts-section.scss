@@ -1,0 +1,46 @@
+.discounts-slider-wrapper {
+    position: relative;
+}
+
+.discounts-slider {
+    margin-left: -1rem;
+    margin-right: -1rem;
+
+    .slick-slide {
+        padding: 1rem;
+    }
+}
+
+.discounts-slider-prev,
+.discounts-slider-next {
+    display: none;
+    position: absolute;
+    top: 50%;
+    color: #b7b7b7;
+    background-color: #f0f4f8;
+    border: 1px solid #e8ebee;
+    @include padding(1.8rem 0.875rem);
+    @include font-size(1.4rem);
+    line-height: 1;
+    cursor: pointer;
+
+    @include mediaAbove(sm) {
+        display: block;
+    }
+
+    &.slick-disabled {
+        display: none !important;
+    }
+}
+
+.discounts-slider-prev {
+    right: -1rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.discounts-slider-next {
+    left: -1rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
