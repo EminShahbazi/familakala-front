@@ -20,14 +20,15 @@
 
 .product__discount {
     position: absolute;
-    top: 0;
-    left: 0;
-    background-color: $primary-color;
-    border-bottom-right-radius: 5px;
+    top: 1rem;
+    left: 1rem;
+    padding: 4px 8px;
+    background-color: $danger-color;
+    border-radius: 2px;
     color: $white;
-    padding: 20px 5px;
-    @include font-size(25px);
+    // font-size: 0.875rem;
     font-weight: $font-weight-bold;
+    line-height: 1;
 
     &::after {
         content: "-";

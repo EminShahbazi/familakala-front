@@ -1428,20 +1428,14 @@ progress {
 
 .product__discount {
   position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #3497fd;
-  border-bottom-right-radius: 5px;
+  top: 1rem;
+  left: 1rem;
+  padding: 4px 8px;
+  background-color: #f8353e;
+  border-radius: 2px;
   color: #ffffff;
-  padding: 20px 5px;
-  font-size: calc(1.28125rem + 0.375vw);
   font-weight: 700;
-}
-
-@media (min-width: 1200px) {
-  .product__discount {
-    font-size: 1.5625rem;
-  }
+  line-height: 1;
 }
 
 .product__discount::after {
