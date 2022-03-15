@@ -1424,6 +1424,7 @@ progress {
 
 .product a {
   display: block;
+  color: inherit;
 }
 
 .product__image {
