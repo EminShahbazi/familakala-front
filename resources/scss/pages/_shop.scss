@@ -1,0 +1,55 @@
+.products-guide {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.25rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #f0f4f8;
+    color: #748a9d;
+
+    @include mediaAbove(md) {
+        padding: 1rem;
+    }
+}
+
+.products-guide__item {
+    .icon,
+    .title {
+        vertical-align: middle;
+    }
+
+    .icon {
+        font-size: 1rem;
+        margin-left: 0.5rem;
+    }
+
+    .title {
+    }
+
+    @include mediaAbove(md) {
+        .icon {
+            font-size: 1.5rem;
+            margin-left: 0.75rem;
+        }
+
+        .title {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+@include mediaAbove(lg) {
+    .products-list-wrapper {
+        display: flex;
+    }
+
+    .products-list {
+        order: 2;
+    }
+
+    .products-filters {
+        width: 320px;
+        flex-shrink: 0;
+        order: 1;
+    }
+}
