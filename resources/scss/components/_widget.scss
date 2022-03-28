@@ -1,0 +1,53 @@
+.widget {
+    position: relative;
+    padding: 1.25rem 1.5rem;
+    background-color: #f0f4f8;
+    border: 1px solid #dbe2ed;
+    border-radius: 0.5rem;
+
+    &.toggled {
+        .widget__title {
+            margin-bottom: 1rem;
+
+            &::after {
+                content: "\e916";
+            }
+        }
+        .widget__content {
+            display: block;
+        }
+    }
+}
+
+.widget__title {
+    color: #748a9d;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1;
+    cursor: pointer;
+
+    &::after {
+        content: "\e915";
+        font-family: FamilaIcons;
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        font-size: 10px;
+    }
+}
+
+.widget__content {
+    display: none;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            &:not(:last-child) {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+}

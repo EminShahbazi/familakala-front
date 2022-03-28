@@ -675,6 +675,49 @@ progress {
   color: inherit;
 }
 
+input.checkbox {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+input.checkbox:checked + label.checkbox::before {
+  content: "\e919";
+  font-family: FamilaIcons;
+  text-align: center;
+  background-color: #3497fd;
+  border-color: #3497fd;
+}
+
+label.checkbox::before {
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin-left: 0.5rem;
+  color: #ffffff;
+  background-color: #dbe2ed;
+  border: 1px solid #dbe2ed;
+  border-radius: 50%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  vertical-align: middle;
+  font-size: 8px;
+  line-height: 20px;
+}
+
+label.checkbox:hover {
+  cursor: pointer;
+}
+
+label.checkbox:hover:before {
+  border-color: #3497fd;
+}
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1390,6 +1433,10 @@ progress {
   content: "\e918";
 }
 
+.icon-check:before {
+  content: "\e919";
+}
+
 .product {
   position: relative;
   border-radius: 15px;
@@ -1571,6 +1618,57 @@ progress {
 
 .section--gray {
   background-color: #f6f6f6;
+}
+
+.widget {
+  position: relative;
+  padding: 1.25rem 1.5rem;
+  background-color: #f0f4f8;
+  border: 1px solid #dbe2ed;
+  border-radius: 0.5rem;
+}
+
+.widget.toggled .widget__title {
+  margin-bottom: 1rem;
+}
+
+.widget.toggled .widget__title::after {
+  content: "\e916";
+}
+
+.widget.toggled .widget__content {
+  display: block;
+}
+
+.widget__title {
+  color: #748a9d;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.widget__title::after {
+  content: "\e915";
+  font-family: FamilaIcons;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 10px;
+}
+
+.widget__content {
+  display: none;
+}
+
+.widget__content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.widget__content ul li:not(:last-child) {
+  margin-bottom: 0.5rem;
 }
 
 .container {
@@ -3013,5 +3111,6 @@ body.has-overlay .body-mask {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    padding-left: 1rem;
   }
 }
