@@ -23,9 +23,6 @@
         margin-left: 0.5rem;
     }
 
-    .title {
-    }
-
     @include mediaAbove(md) {
         .icon {
             font-size: 1.5rem;
