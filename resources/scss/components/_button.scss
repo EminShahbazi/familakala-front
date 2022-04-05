@@ -1,0 +1,35 @@
+.btn {
+    display: inline-block;
+    padding: 0.875rem 1.5rem;
+    cursor: pointer;
+
+    background: transparent;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0.25rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    line-height: 1;
+
+    .icon {
+        vertical-align: middle;
+    }
+}
+
+.btn--rounded {
+    border-radius: 2.25rem;
+}
+
+// sizes
+
+// colors
+.btn--primary {
+    background: $primary-color;
+    border-color: $primary-color;
+    color: #ffffff;
+
+    &:hover {
+        background: darken($primary-color, 10);
+        border-color: darken($primary-color, 10);
+    }
+}

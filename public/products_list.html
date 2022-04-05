@@ -702,7 +702,32 @@
                         </div>
                     </div>
                 </main>
+
                 <aside class="products-filters">
+                    <div class="widget widget-price mb-1 toggled">
+                        <div class="widget__title">محدوده قیمت</div>
+                        <div class="widget__content">
+                            <div class="price-slider" id="price-slider"></div>
+                            <div class="price-show">
+                                <div class="price">
+                                    <span class="amout" id="price-filter-min" data-value="0" data-range="0">0</span>
+                                    <span class="currency">تومان</span>
+                                </div>
+                                <div class="to">تا</div>
+                                <div class="price">
+                                    <span class="amout" id="price-filter-max" data-value="20000000"
+                                        data-range="20000000">20,000,000</span>
+                                    <span class="currency">تومان</span>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <div class="price-filter-btn btn btn--primary btn--rounded" id="price-filter-submit">
+                                    اعمال
+                                    فیلتر</div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="widget toggled">
                         <div class="widget__title">رنگ</div>
                         <div class="widget__content">
@@ -729,12 +754,7 @@
                 </aside>
             </div>
         </div>
-
-
-
     </div>
-
-
 
     <footer class="site-footer">
         <div class="container">
@@ -999,9 +1019,9 @@
     <div class="body-mask" id="js-body-mask"></div>
 
     <script src="assets/js/jquery-3.6.0.js"></script>
-    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/nouislider.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/homepage.js"></script>
+    <script src="assets/js/shop.js"></script>
 </body>
 
 </html>

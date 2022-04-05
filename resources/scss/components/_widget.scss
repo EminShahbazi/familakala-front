@@ -51,3 +51,41 @@
         }
     }
 }
+
+// Price Widget
+.widget-price {
+    .price-slider {
+        margin-top: 1.5rem;
+    }
+    .price-show {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin: 2rem 0 1rem;
+        .to {
+            margin: 0 1rem;
+            flex-shrink: 0;
+        }
+    }
+
+    .price {
+        flex-grow: 1;
+        flex-shrink: 0;
+        border: 1px solid hsl(218, 27%, 94%);
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        text-align: center;
+        background-color: $white;
+        // font-size: 80%;
+
+        .currency {
+            display: none;
+        }
+    }
+
+    .price-filter-btn {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
