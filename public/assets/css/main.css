@@ -1988,7 +1988,6 @@ label.checkbox:hover:before {
   position: relative;
   padding: 1.25rem 1.5rem;
   background-color: #f0f4f8;
-  border: 1px solid #dbe2ed;
   border-radius: 0.5rem;
 }
 
