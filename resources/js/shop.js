@@ -45,3 +45,7 @@ const filterProducts = (function () {
         }
     }
 })();
+
+$("#category-desc-more").on("click", function (e) {
+    $(e.target).parents(".category-desc").toggleClass("show-all");
+});
