@@ -39,3 +39,23 @@ var headerCats = function () {
     $container.toggleClass("show-all");
   }
 }();
+
+var pageLoading = function () {
+  // Cache DOM
+  var $pageLoading = $("#js-page-loading"); // Functions
+
+  function show() {
+    $body.addClass("has-overlay");
+    $pageLoading.show();
+  }
+
+  function hide() {
+    $pageLoading.hide();
+    $body.removeClass("has-overlay");
+  }
+
+  return {
+    show: show,
+    hide: hide
+  };
+}();

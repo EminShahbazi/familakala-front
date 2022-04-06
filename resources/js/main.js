@@ -40,3 +40,24 @@ const headerCats = (function () {
         $container.toggleClass("show-all");
     }
 })();
+
+const pageLoading = (function () {
+    // Cache DOM
+    const $pageLoading = $("#js-page-loading");
+
+    // Functions
+    function show() {
+        $body.addClass("has-overlay");
+        $pageLoading.show();
+    }
+
+    function hide() {
+        $pageLoading.hide();
+        $body.removeClass("has-overlay");
+    }
+
+    return {
+        show: show,
+        hide: hide,
+    };
+})();

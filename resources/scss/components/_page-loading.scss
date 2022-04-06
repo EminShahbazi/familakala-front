@@ -1,0 +1,70 @@
+.page-loading {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+    max-width: 360px;
+    padding: 2rem;
+
+    background-color: #fff;
+    border-radius: 4px;
+
+    z-index: 999;
+
+    .brand {
+        color: $primary-color;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+}
+
+.page-loading__spinner {
+    margin: 1rem auto 0;
+    width: 70px;
+    text-align: center;
+
+    & > div {
+        width: 10px;
+        height: 10px;
+        background-color: $primary-color;
+
+        border-radius: 100%;
+        display: inline-block;
+        animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    }
+
+    .bounce1 {
+        animation-delay: -0.32s;
+    }
+
+    .bounce2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+    }
+}
+
+@-webkit-keyframes sk-bouncedelay {
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes sk-bouncedelay {
+    0%,
+    80%,
+    100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}
