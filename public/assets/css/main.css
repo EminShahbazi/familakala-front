@@ -1799,6 +1799,48 @@ label.checkbox:hover:before {
   content: "\e919";
 }
 
+.pagination {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.pagination__item {
+  display: inline-block;
+  border: 1px solid #e7e7e7;
+  padding: 8px 13px 6px;
+  line-height: 1;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s ease, border-color 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.pagination__item a {
+  color: #313d4c;
+}
+
+.pagination__item.current {
+  cursor: unset;
+}
+
+.pagination__item.current, .pagination__item:hover {
+  background-color: #3497fd;
+  border-color: #3497fd;
+  color: #ffffff;
+}
+
+.pagination__item.current a, .pagination__item:hover a {
+  color: #ffffff;
+}
+
+.pagination__item.seperator {
+  cursor: default;
+}
+
+.pagination__item:not(:last-child) {
+  margin-left: 0.5rem;
+}
+
 .product {
   position: relative;
   border-radius: 15px;
