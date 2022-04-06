@@ -7,8 +7,12 @@ var filterProducts = function () {
   var priceSlider = document.getElementById("price-slider");
   var $priceMin = $("#price-filter-min");
   var $priceMax = $("#price-filter-max");
-  var $priceButton = $("#price-filter-submit"); // Events
-  // Init
+  var $priceButton = $("#price-filter-submit");
+  var $mobileFiltersToggler = $("#products-filters-toggler");
+  var $mobileFilters = $("#products-filters"); // Events
+
+  $mobileFiltersToggler.on("click", openFilters);
+  $bodyMask.on("click", closeFilters); // Init
 
   init();
 
@@ -37,6 +41,17 @@ var filterProducts = function () {
         }));
       });
     }
+  } // Events
+
+
+  function openFilters() {
+    $body.addClass("has-overlay");
+    $mobileFilters.addClass("open");
+  }
+
+  function closeFilters() {
+    $mobileFilters.removeClass("open");
+    $body.removeClass("has-overlay");
   }
 }();
 

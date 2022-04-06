@@ -35,9 +35,37 @@
     }
 }
 
+.products-filters {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    max-width: 100%;
+    padding: 1rem;
+    z-index: 999;
+    transform: translate3d(100%, 0, 0);
+    transition: transform 0.25s ease;
+    background-color: #fff;
+    overflow-x: auto;
+    height: 100vh;
+
+    &.open {
+        transform: none;
+    }
+}
+
+.pl-mobile-actions {
+    text-align: left;
+    margin: 1.5rem 0 1rem;
+}
+
 @include mediaAbove(lg) {
     .products-list-wrapper {
         display: flex;
+    }
+
+    .pl-mobile-actions {
+        display: none;
     }
 
     .products-list {
@@ -45,10 +73,15 @@
     }
 
     .products-filters {
-        width: 320px;
         flex-shrink: 0;
+        position: relative;
+        width: 320px;
+        height: auto;
+        padding: 0;
         order: 1;
         padding-left: 1rem;
+        transform: none;
+        z-index: auto;
     }
 }
 

@@ -14,6 +14,12 @@
     .icon {
         vertical-align: middle;
     }
+
+    &.btn--icon-right {
+        .icon {
+            margin-left: 0.25rem;
+        }
+    }
 }
 
 .btn--rounded {
@@ -21,6 +27,9 @@
 }
 
 // sizes
+.btn--small {
+    padding: 0.5rem 1rem;
+}
 
 // colors
 .btn--primary {
@@ -32,4 +41,23 @@
         background: darken($primary-color, 10);
         border-color: darken($primary-color, 10);
     }
+}
+
+.btn--primary-outline {
+    background: $white;
+    border-color: $primary-color;
+    color: $primary-color;
+
+    &:hover {
+        background: $primary-color;
+        color: #ffffff;
+    }
+}
+
+.btn--text {
+    padding: 0;
+    line-height: inherit;
+    border: 0;
+    border-radius: 0;
+    color: $primary-color;
 }

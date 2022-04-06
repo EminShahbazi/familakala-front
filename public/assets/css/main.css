@@ -993,8 +993,16 @@ progress {
   vertical-align: middle;
 }
 
+.btn.btn--icon-right .icon {
+  margin-left: 0.25rem;
+}
+
 .btn--rounded {
   border-radius: 2.25rem;
+}
+
+.btn--small {
+  padding: 0.5rem 1rem;
 }
 
 .btn--primary {
@@ -1006,6 +1014,25 @@ progress {
 .btn--primary:hover {
   background: #027dfc;
   border-color: #027dfc;
+}
+
+.btn--primary-outline {
+  background: #ffffff;
+  border-color: #3497fd;
+  color: #3497fd;
+}
+
+.btn--primary-outline:hover {
+  background: #3497fd;
+  color: #ffffff;
+}
+
+.btn--text {
+  padding: 0;
+  line-height: inherit;
+  border: 0;
+  border-radius: 0;
+  color: #3497fd;
 }
 
 .breadcrumb {
@@ -1797,6 +1824,14 @@ label.checkbox:hover:before {
 
 .icon-check:before {
   content: "\e919";
+}
+
+.icon-filter:before {
+  content: "\e91a";
+}
+
+.icon-sort:before {
+  content: "\e91b";
 }
 
 .pagination {
@@ -2919,7 +2954,7 @@ body.has-overlay {
 
 body.has-overlay .body-mask {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -3614,11 +3649,43 @@ body.has-overlay .body-mask {
   }
 }
 
+.products-filters {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px;
+  max-width: 100%;
+  padding: 1rem;
+  z-index: 999;
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+  -webkit-transition: -webkit-transform 0.25s ease;
+  transition: -webkit-transform 0.25s ease;
+  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+  background-color: #fff;
+  overflow-x: auto;
+  height: 100vh;
+}
+
+.products-filters.open {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.pl-mobile-actions {
+  text-align: left;
+  margin: 1.5rem 0 1rem;
+}
+
 @media (min-width: 992px) {
   .products-list-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .pl-mobile-actions {
+    display: none;
   }
   .products-list {
     -webkit-box-ordinal-group: 3;
@@ -3626,13 +3693,19 @@ body.has-overlay .body-mask {
             order: 2;
   }
   .products-filters {
-    width: 320px;
     -ms-flex-negative: 0;
         flex-shrink: 0;
+    position: relative;
+    width: 320px;
+    height: auto;
+    padding: 0;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
     padding-left: 1rem;
+    -webkit-transform: none;
+            transform: none;
+    z-index: auto;
   }
 }
 
@@ -3672,6 +3745,10 @@ body.has-overlay .body-mask {
 .category-desc.show-all .category-desc__more .icon {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.mr-1 {
+  margin-right: 1rem;
 }
 
 .mb-1 {

@@ -7,8 +7,12 @@ const filterProducts = (function () {
     const $priceMin = $("#price-filter-min");
     const $priceMax = $("#price-filter-max");
     const $priceButton = $("#price-filter-submit");
+    const $mobileFiltersToggler = $("#products-filters-toggler");
+    const $mobileFilters = $("#products-filters");
 
     // Events
+    $mobileFiltersToggler.on("click", openFilters);
+    $bodyMask.on("click", closeFilters);
 
     // Init
     init();
@@ -43,6 +47,17 @@ const filterProducts = (function () {
                 );
             });
         }
+    }
+
+    // Events
+    function openFilters() {
+        $body.addClass("has-overlay");
+        $mobileFilters.addClass("open");
+    }
+
+    function closeFilters() {
+        $mobileFilters.removeClass("open");
+        $body.removeClass("has-overlay");
     }
 })();
 
