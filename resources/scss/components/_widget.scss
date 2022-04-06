@@ -52,6 +52,33 @@
     }
 }
 
+.widget__search {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    background-color: $white;
+    border-radius: 30px;
+    border: 1px solid #eceff4;
+    // box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+
+    input {
+        flex-grow: 1;
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+
+        &::placeholder {
+            color: #a6bcd0;
+        }
+    }
+
+    .icon {
+        flex-shrink: 0;
+        color: #adc1d3;
+    }
+}
+
 // Price Widget
 .widget-price {
     .price-slider {
