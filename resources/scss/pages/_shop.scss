@@ -60,7 +60,7 @@
 }
 
 @include mediaAbove(lg) {
-    .products-list-wrapper {
+    .products-page__content {
         display: flex;
     }
 
@@ -68,7 +68,7 @@
         display: none;
     }
 
-    .products-list {
+    .products-page__main {
         order: 2;
     }
 

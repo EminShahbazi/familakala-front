@@ -3751,7 +3751,7 @@ body.has-overlay .body-mask {
 }
 
 @media (min-width: 992px) {
-  .products-list-wrapper {
+  .products-page__content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3759,7 +3759,7 @@ body.has-overlay .body-mask {
   .pl-mobile-actions {
     display: none;
   }
-  .products-list {
+  .products-page__main {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
