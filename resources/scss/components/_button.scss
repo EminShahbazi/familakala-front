@@ -31,6 +31,11 @@
     padding: 0.5rem 1rem;
 }
 
+.btn--block {
+    display: block;
+    width: 100%;
+}
+
 // colors
 .btn--primary {
     background: $primary-color;
@@ -60,4 +65,37 @@
     border: 0;
     border-radius: 0;
     color: $primary-color;
+}
+
+.product-price {
+    margin-top: 1rem;
+    span {
+        display: inline-block;
+    }
+    .percent {
+        margin-left: 8px;
+        padding: 4px 8px;
+        border-radius: 4px;
+
+        background-color: $danger-color;
+        color: $white;
+        line-height: 1;
+    }
+
+    .old {
+        color: $gray-500;
+        text-decoration: line-through;
+    }
+
+    .current {
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: $primary-color;
+    }
+
+    .currency {
+        color: $primary-color;
+        margin-right: 0.25rem;
+        font-size: 1.2rem;
+    }
 }
