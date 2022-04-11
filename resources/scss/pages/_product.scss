@@ -134,17 +134,115 @@ label.product-option--color {
     }
 
     .product-slider {
-        width: 40%;
-        margin-left: 2rem;
+        width: 45%;
+        margin-left: 3rem;
         flex-shrink: 0;
     }
 
     .product-info {
-        width: 60%;
+        width: 55%;
     }
 
     .product-options,
     .product-title {
         margin-left: 65px;
+    }
+}
+
+.product-slider {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.product-nav-slider-wrapper {
+    display: none;
+    width: 100px;
+    margin-left: 1.5rem;
+    // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    // border-radius: 1rem;
+
+    @include mediaAbove(lg) {
+        display: block;
+    }
+}
+
+.product-main-slider-wrapper {
+    overflow: hidden;
+    // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    // border-radius: 1rem;
+}
+
+.product-main-slider {
+    &.slick-dotted.slick-slider {
+        margin-bottom: 0;
+    }
+
+    .slide {
+        // max-width: 400px;
+        max-height: 440px;
+        margin: 0 auto;
+        text-align: center;
+
+        img {
+            // width: 100%;
+            max-width: 100%;
+            height: 100%;
+            display: initial !important;
+        }
+    }
+
+    .slick-dots {
+        bottom: 0;
+        right: 0;
+        width: 100%;
+
+        li {
+            button {
+                background: #d9dcdf;
+            }
+
+            &.slick-active {
+                button {
+                    background: #748a9d;
+                }
+            }
+        }
+
+        @include mediaAbove(lg) {
+            display: none !important;
+        }
+    }
+}
+
+.product-nav-slider {
+    flex-shrink: 0;
+    width: 100px;
+    margin-left: 1.5rem;
+    float: right;
+    z-index: 9;
+
+    .slide {
+        width: 80px;
+        margin: 0 auto;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.product-nav-slider-arrow {
+    text-align: center;
+    line-height: 1;
+    font-size: 0.75rem;
+    color: #748a9d;
+    cursor: pointer;
+
+    &:hover {
+        color: $body-color;
+    }
+
+    &.slick-disabled {
+        color: #d7d7d7;
+        // cursor: not-allowed;
     }
 }
