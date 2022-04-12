@@ -4259,6 +4259,32 @@ dl.product-info dd {
   margin-right: 1rem;
 }
 
+.product-attributes-table {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.product-attributes-table th,
+.product-attributes-table td {
+  padding: 0.875rem 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.16);
+}
+
+.product-attributes-table th {
+  font-weight: 500;
+}
+
+.product-attributes-table th.group-title {
+  color: #3497fd;
+  border-bottom: 0;
+  padding: 1.5rem 0 0;
+}
+
+.product-attributes-table td {
+  text-align: left;
+}
+
 .mt-1 {
   margin-top: 1rem;
 }

@@ -279,3 +279,28 @@ dl.product-info {
         margin-right: 1rem;
     }
 }
+
+.product-attributes-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+
+    th,
+    td {
+        padding: 0.875rem 0;
+        border-bottom: 1px dashed rgba(0, 0, 0, 0.16);
+    }
+
+    th {
+        font-weight: 500;
+
+        &.group-title {
+            color: $primary-color;
+            border-bottom: 0;
+            padding: 1.5rem 0 0;
+        }
+    }
+    td {
+        text-align: left;
+    }
+}
