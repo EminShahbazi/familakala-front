@@ -1,0 +1,10 @@
+.ed-content p {
+  line-height: 1.8;
+}
+
+.ed-content h1,
+.ed-content h2,
+.ed-content h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+}

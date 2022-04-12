@@ -1105,6 +1105,59 @@ progress {
   color: inherit;
 }
 
+.ed-content p {
+  line-height: 1.8;
+}
+
+.ed-content h1,
+.ed-content h2,
+.ed-content h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.ed-content h1 {
+  font-size: calc(1.325rem + 0.9vw);
+}
+
+@media (min-width: 1200px) {
+  .ed-content h1 {
+    font-size: 2rem;
+  }
+}
+
+.ed-content h2 {
+  font-size: calc(1.3rem + 0.6vw);
+}
+
+@media (min-width: 1200px) {
+  .ed-content h2 {
+    font-size: 1.75rem;
+  }
+}
+
+.ed-content h3 {
+  font-size: calc(1.275rem + 0.3vw);
+}
+
+@media (min-width: 1200px) {
+  .ed-content h3 {
+    font-size: 1.5rem;
+  }
+}
+
+.ed-content h4 {
+  font-size: 1.25rem;
+}
+
+.ed-content h5 {
+  font-size: 1.1rem;
+}
+
+.ed-content h6 {
+  font-size: 1rem;
+}
+
 input.checkbox {
   display: none;
 }
