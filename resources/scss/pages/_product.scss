@@ -303,4 +303,12 @@ dl.product-info {
     td {
         text-align: left;
     }
+
+    .icon-checkmark {
+        color: $success-color;
+    }
+    .icon-cross {
+        font-size: 0.875rem;
+        color: $danger-color;
+    }
 }

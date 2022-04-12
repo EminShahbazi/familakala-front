@@ -1926,6 +1926,10 @@ label.checkbox:hover:before {
   content: "\e91b";
 }
 
+.icon-cross:before {
+  content: "\e91c";
+}
+
 .pagination {
   margin: 20px 0;
   text-align: center;
@@ -4283,6 +4287,15 @@ dl.product-info dd {
 
 .product-attributes-table td {
   text-align: left;
+}
+
+.product-attributes-table .icon-checkmark {
+  color: #98ad0a;
+}
+
+.product-attributes-table .icon-cross {
+  font-size: 0.875rem;
+  color: #f8353e;
 }
 
 .mt-1 {
