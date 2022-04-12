@@ -28,4 +28,6 @@ $(document).ready(function () {
             // centerMode: true,
         });
     })();
+
+    $("#product-tabs").tabs();
 });

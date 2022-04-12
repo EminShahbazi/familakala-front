@@ -59,3 +59,28 @@ var pageLoading = function () {
     hide: hide
   };
 }();
+
+jQuery.fn.tabs = function () {
+  this.each(function () {
+    // cache DOM
+    var $tabs = $(this);
+    var $togglers = $tabs.find(".js-tab-toggler");
+    var $contents = $tabs.find(".js-tab-content"); // Events
+
+    $togglers.on("click", selectTab); // Event Handlers
+
+    function selectTab(e) {
+      var $this = $(e.target);
+
+      if ($this.hasClass("active")) {
+        return;
+      }
+
+      $togglers.removeClass("active");
+      $contents.removeClass("active");
+      $this.addClass("active");
+      $($this.data("content")).addClass("active");
+    }
+  });
+  return this;
+};

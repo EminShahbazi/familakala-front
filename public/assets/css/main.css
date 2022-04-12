@@ -2170,6 +2170,61 @@ label.checkbox:hover:before {
   background-color: #f6f6f6;
 }
 
+.tabs__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1.5rem;
+  border-top: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+@media (min-width: 768px) {
+  .tabs__header {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.tabs__header__item {
+  position: relative;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+}
+
+.tabs__header__item.active {
+  font-weight: 500;
+}
+
+.tabs__header__item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #3497fd;
+  border-color: #ffffff;
+  border-style: solid;
+  border-width: 0 0.5rem;
+}
+
+.tabs__header__item.active:first-child::after {
+  border-right-width: 0;
+}
+
+.tab__content__item {
+  display: none;
+}
+
+.tab__content__item.active {
+  display: block;
+}
+
 .widget {
   position: relative;
   padding: 1.25rem 1.5rem;
@@ -4153,6 +4208,10 @@ dl.product-info dd {
 
 .mt-1 {
   margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
 }
 
 .mr-1 {
