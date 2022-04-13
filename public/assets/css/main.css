@@ -4337,6 +4337,51 @@ dl.product-info dd {
   font-size: 1.4rem;
 }
 
+.product-question {
+  margin-bottom: 1.25rem;
+}
+
+.product-question .question-wrapper .author {
+  font-weight: 500;
+}
+
+.product-question .question-wrapper .date {
+  margin: 0.25rem 0;
+  color: #adb5bd;
+  font-size: 0.875rem;
+}
+
+.product-question .question-wrapper .title {
+  color: #707070;
+}
+
+.product-question .answer-wrapper {
+  position: relative;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f0f4f8;
+  border-radius: 0.5rem;
+  color: #07284a;
+  font-weight: 500;
+}
+
+.product-question .answer-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: 2rem;
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 7px 7px 7px;
+  border-color: transparent transparent #f0f4f8 transparent;
+}
+
+.product-question .answer-wrapper p {
+  margin: 0;
+}
+
 .mt-1 {
   margin-top: 1rem;
 }
