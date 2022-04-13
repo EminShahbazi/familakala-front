@@ -4243,20 +4243,14 @@ label.product-option--color .color {
 }
 
 .product-section {
-  margin: 2rem 0;
+  margin: 2.5rem 0;
 }
 
 .product-section__header {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.1rem;
   color: #3497fd;
   font-weight: 500;
-  font-size: calc(1.255rem + 0.06vw);
-}
-
-@media (min-width: 1200px) {
-  .product-section__header {
-    font-size: 1.3rem;
-  }
+  font-size: 1.2rem;
 }
 
 .product-section__content--gray {

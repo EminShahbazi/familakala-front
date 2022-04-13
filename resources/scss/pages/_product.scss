@@ -249,14 +249,14 @@ label.product-option--color {
 
 // Sections
 .product-section {
-    margin: 2rem 0;
+    margin: 2.5rem 0;
 }
 
 .product-section__header {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.1rem;
     color: $primary-color;
     font-weight: 500;
-    @include font-size(1.3rem);
+    @include font-size(1.2rem);
 }
 
 .product-section__content--gray {
