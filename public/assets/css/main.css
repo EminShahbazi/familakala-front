@@ -1930,6 +1930,22 @@ label.checkbox:hover:before {
   content: "\e91c";
 }
 
+.icon-heart-o:before {
+  content: "\e91f";
+}
+
+.icon-heart:before {
+  content: "\e920";
+}
+
+.icon-share:before {
+  content: "\e91d";
+}
+
+.icon-star-outline:before {
+  content: "\e91e";
+}
+
 .pagination {
   margin: 20px 0;
   text-align: center;
@@ -4243,6 +4259,11 @@ label.product-option--color .color {
   }
 }
 
+.product-section__content--gray {
+  padding: 2rem 0;
+  background-color: #f0f4f8;
+}
+
 dl.product-info dt,
 dl.product-info dd {
   display: inline-block;
@@ -4296,6 +4317,30 @@ dl.product-info dd {
 .product-attributes-table .icon-cross {
   font-size: 0.875rem;
   color: #f8353e;
+}
+
+.product-video-guide {
+  display: block;
+  width: 100%;
+  max-width: 774px;
+  margin: 0 auto;
+}
+
+.product-video-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 250px;
+  margin: 1.25rem auto 0;
+  color: #3497fd;
+  cursor: pointer;
+}
+
+.product-video-actions .icon {
+  font-size: 1.4rem;
 }
 
 .mt-1 {

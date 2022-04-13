@@ -259,6 +259,11 @@ label.product-option--color {
     @include font-size(1.3rem);
 }
 
+.product-section__content--gray {
+    padding: 2rem 0;
+    background-color: #f0f4f8;
+}
+
 dl.product-info {
     dt,
     dd {
@@ -310,5 +315,25 @@ dl.product-info {
     .icon-cross {
         font-size: 0.875rem;
         color: $danger-color;
+    }
+}
+
+.product-video-guide {
+    display: block;
+    width: 100%;
+    max-width: 774px;
+    margin: 0 auto;
+}
+
+.product-video-actions {
+    display: flex;
+    justify-content: space-between;
+    max-width: 250px;
+    margin: 1.25rem auto 0;
+    color: $primary-color;
+    cursor: pointer;
+
+    .icon {
+        font-size: 1.4rem;
     }
 }
