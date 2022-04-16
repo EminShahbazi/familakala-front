@@ -1,0 +1,39 @@
+.order-process {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    margin: 1.25rem auto 0;
+    padding: 0;
+
+    li {
+        text-align: center;
+        padding: 0.4rem 0.9rem;
+        border-radius: 1rem;
+        line-height: 1;
+
+        .icon {
+            font-size: 1.8rem;
+        }
+
+        &.active {
+            background-color: $primary-color;
+            color: $white;
+        }
+
+        &.passed {
+            background-color: #f0f4f8;
+            color: $primary-color;
+        }
+
+        &.failed {
+            background-color: #f0f4f8;
+            color: $danger-color;
+        }
+
+        @include mediaAbove(340px) {
+            padding: 0.7rem 1.8rem;
+            border-radius: 2.25rem;
+        }
+    }
+}
