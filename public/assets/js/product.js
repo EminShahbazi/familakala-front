@@ -58,5 +58,6 @@ $(document).ready(function () {
       }
     }]
   });
-  $("#product-tabs").tabs();
+  $("#product-info-tabs").tabs();
+  $("#product-review-tabs").tabs();
 });
