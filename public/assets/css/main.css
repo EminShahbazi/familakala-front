@@ -4581,6 +4581,7 @@ label.product-option--color .color {
 
 .comments-list .comment:last-child {
   border-bottom: 0;
+  margin-bottom: 0;
 }
 
 dl.product-info dt,
