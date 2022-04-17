@@ -50,3 +50,7 @@
 .ed-content h6 {
   font-size: 1rem;
 }
+
+.ed-content img {
+  max-width: 100%;
+}
