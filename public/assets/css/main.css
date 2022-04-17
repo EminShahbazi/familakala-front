@@ -1032,6 +1032,18 @@ progress {
   color: #ffffff;
 }
 
+.btn--light {
+  background: #f0f4f8;
+  border-color: #f0f4f8;
+  color: #748a9d;
+}
+
+.btn--light:hover {
+  background: #3497fd;
+  border-color: #3497fd;
+  color: #ffffff;
+}
+
 .btn--text {
   padding: 0;
   line-height: inherit;
@@ -1972,6 +1984,14 @@ label.checkbox:hover:before {
 
 .icon-shopping-cart:before {
   content: "\e926";
+}
+
+.icon-add:before {
+  content: "\e927";
+}
+
+.icon-subtract:before {
+  content: "\e928";
 }
 
 .pagination {
@@ -4582,6 +4602,7 @@ dl.product-info dd {
 }
 
 .space-between {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }

@@ -59,6 +59,18 @@
     }
 }
 
+.btn--light {
+    background: #f0f4f8;
+    border-color: #f0f4f8;
+    color: #748a9d;
+
+    &:hover {
+        background: $primary-color;
+        border-color: $primary-color;
+        color: #ffffff;
+    }
+}
+
 .btn--text {
     padding: 0;
     line-height: inherit;
