@@ -419,3 +419,19 @@ dl.product-info {
     margin-top: 2rem;
     color: $primary-color;
 }
+
+// related products
+.relatedp-slider-wrapper {
+    position: relative;
+}
+
+.related-products-slider {
+    .slick-slide {
+        padding: 1rem;
+    }
+
+    @include mediaAbove(md) {
+        margin-right: -1rem;
+        margin-left: -1rem;
+    }
+}

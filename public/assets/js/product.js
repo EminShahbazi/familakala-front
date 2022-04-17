@@ -33,32 +33,38 @@ $(document).ready(function () {
     });
   }();
 
-  $("#discounts-slider").slick({
+  $("#relatedp-slider").slick({
     infinite: false,
-    slidesToShow: 5.2,
+    slidesToShow: 1.5,
     slidesToScroll: 1,
-    prevArrow: $("#js-discounts-slider-prev"),
-    nextArrow: $("#js-discounts-slider-next"),
+    prevArrow: $("#js-relatedp-slider-prev"),
+    nextArrow: $("#js-relatedp-slider-next"),
     rtl: true,
+    mobileFirst: true,
     responsive: [{
       breakpoint: 1200,
       settings: {
-        slidesToShow: 4.2
+        slidesToShow: 4.8
       }
     }, {
       breakpoint: 992,
       settings: {
-        slidesToShow: 3.2
+        slidesToShow: 3.8
       }
     }, {
       breakpoint: 768,
       settings: {
-        slidesToShow: 2.2
+        slidesToShow: 2.5
+      }
+    }, {
+      breakpoint: 570,
+      settings: {
+        slidesToShow: 2.8
       }
     }, {
       breakpoint: 480,
       settings: {
-        slidesToShow: 1.2
+        slidesToShow: 2.2
       }
     }]
   });
@@ -68,8 +74,8 @@ $(document).ready(function () {
     slidesToScroll: 1,
     arrows: false,
     mobileFirst: true,
-    // prevArrow: $("#js-discounts-slider-prev"),
-    // nextArrow: $("#js-discounts-slider-next"),
+    // prevArrow: $("#js-relatedp-slider-prev"),
+    // nextArrow: $("#js-relatedp-slider-next"),
     rtl: true
   }, _defineProperty(_$$slick, "mobileFirst", true), _defineProperty(_$$slick, "responsive", [{
     breakpoint: 1200,

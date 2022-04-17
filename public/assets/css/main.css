@@ -4526,6 +4526,21 @@ dl.product-info dd {
   color: #3497fd;
 }
 
+.relatedp-slider-wrapper {
+  position: relative;
+}
+
+.related-products-slider .slick-slide {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .related-products-slider {
+    margin-right: -1rem;
+    margin-left: -1rem;
+  }
+}
+
 .mt-1 {
   margin-top: 1rem;
 }
