@@ -2236,6 +2236,34 @@ label.checkbox:hover:before {
   color: #748a9d;
 }
 
+.rating .stars {
+  position: relative;
+  font-family: FamilaIcons;
+  font-size: 16px;
+}
+
+.rating .stars::before {
+  content: "\e91e\e91e\e91e\e91e\e91e";
+  color: #d3ced2;
+}
+
+.rating .stars .span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  color: #3497fd;
+  overflow: hidden;
+  letter-spacing: -0.6px;
+}
+
+.rating .stars .span::before {
+  content: "\e905\e905\e905\e905\e905";
+  top: 0;
+  position: absolute;
+  right: 0;
+}
+
 .section {
   position: relative;
   margin: 60px 0;
@@ -2500,11 +2528,6 @@ label.checkbox:hover:before {
   padding: 0 0.5rem;
 }
 
-.container.container-md {
-  width: 100%;
-  padding: 0;
-}
-
 @media (min-width: 576px) {
   .container {
     width: 540px;
@@ -2512,42 +2535,47 @@ label.checkbox:hover:before {
 }
 
 @media (min-width: 768px) {
-  .container {
+  .container,
+  .container-md {
     width: 720px;
   }
-  .container.container-md {
-    width: 720px;
+  .container-md {
+    margin: 0 auto;
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 992px) {
-  .container {
+  .container,
+  .container-md,
+  .container-lg {
     width: 960px;
   }
-  .container.container-md {
-    width: 960px;
+  .container-lg {
+    margin: 0 auto;
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 1200px) {
-  .container {
+  .container,
+  .container-md,
+  .container-lg,
+  .container-xl {
     width: 1140px;
   }
-  .container.container-md {
-    width: 1140px;
+  .container-xl {
+    margin: 0 auto;
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 1400px) {
-  .container {
+  .container,
+  .container-md,
+  .container-lg,
+  .container-xl {
     width: 1320px;
-  }
-  .container.container-md {
-    width: 1320px;
-    padding: 0 0.5rem;
   }
 }
 
@@ -4454,6 +4482,48 @@ dl.product-info dd {
 
 .product-question .answer-wrapper p {
   margin: 0;
+}
+
+.comments-slider .slick-slide {
+  padding: 0.5rem;
+}
+
+@media (min-width: 576px) {
+  .comments-slider .slick-slide {
+    padding: 0.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .comments-slider .slick-slide {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .comments-slider .slick-slide {
+    padding: 1.25rem;
+  }
+}
+
+.comment {
+  -webkit-box-shadow: 0px 5px 30px rgba(27, 28, 32, 0.1);
+          box-shadow: 0px 5px 30px rgba(27, 28, 32, 0.1);
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+}
+
+.comment__author {
+  font-weight: 500;
+}
+
+.comment__rating {
+  margin: 0.75rem 0;
+}
+
+.comment__date {
+  margin-top: 2rem;
+  color: #3497fd;
 }
 
 .mt-1 {

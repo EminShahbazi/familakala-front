@@ -2,49 +2,54 @@
     width: 95%;
     margin: 0 auto;
     padding: 0 ($gutter/2);
+}
 
-    &.container-md {
-        width: 100%;
-        padding: 0;
-    }
-
-    @include mediaAbove(sm) {
+@include mediaAbove(sm) {
+    .container {
         width: 540px;
     }
+}
 
-    @include mediaAbove(md) {
+@include mediaAbove(md) {
+    .container,
+    .container-md {
         width: 720px;
-
-        &.container-md {
-            width: 720px;
-            padding: 0 ($gutter/2);
-        }
     }
+    .container-md {
+        margin: 0 auto;
+        padding: 0 ($gutter/2);
+    }
+}
 
-    @include mediaAbove(lg) {
+@include mediaAbove(lg) {
+    .container,
+    .container-md,
+    .container-lg {
         width: 960px;
-
-        &.container-md {
-            width: 960px;
-            padding: 0 ($gutter/2);
-        }
     }
+    .container-lg {
+        margin: 0 auto;
+        padding: 0 ($gutter/2);
+    }
+}
 
-    @include mediaAbove(xl) {
+@include mediaAbove(xl) {
+    .container,
+    .container-md,
+    .container-lg,
+    .container-xl {
         width: 1140px;
-
-        &.container-md {
-            width: 1140px;
-            padding: 0 ($gutter/2);
-        }
     }
-
-    @include mediaAbove(xxl) {
+    .container-xl {
+        margin: 0 auto;
+        padding: 0 ($gutter/2);
+    }
+}
+@include mediaAbove(xxl) {
+    .container,
+    .container-md,
+    .container-lg,
+    .container-xl {
         width: 1320px;
-
-        &.container-md {
-            width: 1320px;
-            padding: 0 ($gutter/2);
-        }
     }
 }

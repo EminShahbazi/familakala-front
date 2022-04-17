@@ -15,4 +15,34 @@
     .count {
         color: #748a9d;
     }
+
+    .stars {
+        position: relative;
+        // display: inline-block;
+        // height: 1rem;
+        font-family: FamilaIcons;
+        font-size: 16px;
+
+        &::before {
+            content: "\e91e\e91e\e91e\e91e\e91e";
+            color: #d3ced2;
+        }
+
+        .span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            color: $primary-color;
+            overflow: hidden;
+            letter-spacing: -0.6px;
+
+            &::before {
+                content: "\e905\e905\e905\e905\e905";
+                top: 0;
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
 }
