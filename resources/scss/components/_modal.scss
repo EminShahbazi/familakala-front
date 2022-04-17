@@ -25,7 +25,6 @@
 
 .modal__dialog {
     margin: 1rem;
-    padding: 2rem;
     background-color: $white;
     border-radius: 0.5rem;
 
@@ -43,8 +42,8 @@
     align-items: center;
     justify-content: space-between;
 
-    padding-bottom: 0.75rem;
-    margin-bottom: 1rem;
+    padding: 1.25rem 2rem 0.75rem;
+    // margin-bottom: 1rem;
     border-bottom: 1px solid $gray-300;
     font-size: 1.2rem;
     font-weight: 500;
@@ -61,12 +60,13 @@
 
 .modal__body {
     min-height: 50px;
-    max-height: 80vh;
+    max-height: 70vh;
     overflow-x: auto;
+    padding: 2rem;
 }
 
 .modal__footer {
-    padding-top: 0.75rem;
+    padding: 1rem;
     margin-top: 1rem;
     border-top: 1px solid $gray-300;
 

@@ -2022,7 +2022,6 @@ label.checkbox:hover:before {
 
 .modal__dialog {
   margin: 1rem;
-  padding: 2rem;
   background-color: #ffffff;
   border-radius: 0.5rem;
   -webkit-transform: translate(0, -50px);
@@ -2050,8 +2049,7 @@ label.checkbox:hover:before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 0.75rem;
-  margin-bottom: 1rem;
+  padding: 1.25rem 2rem 0.75rem;
   border-bottom: 1px solid #dee2e6;
   font-size: 1.2rem;
   font-weight: 500;
@@ -2069,12 +2067,13 @@ label.checkbox:hover:before {
 
 .modal__body {
   min-height: 50px;
-  max-height: 80vh;
+  max-height: 70vh;
   overflow-x: auto;
+  padding: 2rem;
 }
 
 .modal__footer {
-  padding-top: 0.75rem;
+  padding: 1rem;
   margin-top: 1rem;
   border-top: 1px solid #dee2e6;
 }
@@ -4571,6 +4570,19 @@ label.product-option--color .color {
   margin: 0;
 }
 
+.comments-list .comment {
+  margin-bottom: 1.25rem;
+  padding: 1rem 0;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  border-radius: 0;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.comments-list .comment:last-child {
+  border-bottom: 0;
+}
+
 dl.product-info dt,
 dl.product-info dd {
   display: inline-block;
@@ -4664,6 +4676,15 @@ dl.product-info dd {
 
 .mb-1 {
   margin-bottom: 1rem;
+}
+
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.m-0 {
+  margin: 0;
 }
 
 .text-center {
