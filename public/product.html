@@ -338,7 +338,11 @@
 
         <div class="product-section">
             <div class="product-section__header d-flex space-between align-center container">
-                <h4>نظرات کاربران</h4>
+                <div class="d-flex align-center">
+                    <h4>نظرات کاربران</h4>
+                    <div class="text-gray-dark mr-1" id="comments-modal-toggler" role="button">123 نظر</div>
+                </div>
+
                 <div role="button" class="btn btn--light">
                     ثبت دیدگاه
                     <i class="icon icon-add"></i>
@@ -1136,7 +1140,7 @@
             </div>
         </footer>
 
-        <div class="modal comments-modal open" data-toggler="#comments-modal-toggler">
+        <div class="modal comments-modal" data-toggler="#comments-modal-toggler">
             <div class="modal__dialog">
                 <div class="modal__header">
                     <div>123 نظر</div>

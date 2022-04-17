@@ -84,3 +84,46 @@ jQuery.fn.tabs = function () {
   });
   return this;
 };
+
+jQuery.fn.modal = function () {
+  // Cache DOM
+  this.each(function () {
+    var $this = $(this);
+    var $toggler = $($this.data("toggler"));
+    var $close = $this.find(".js-modal-close"); // Event Listners
+
+    $toggler.on("click", openModal);
+    $this.on("click", closeModal);
+    $close.on("click", closeModalBtn); // Event Handlers
+
+    function openModal() {
+      $body.addClass("has-overlay");
+      $this.addClass("open");
+    }
+
+    function closeModal(e) {
+      if (e.target === e.currentTarget) {
+        $body.removeClass("has-overlay");
+        $this.removeClass("open");
+      } // if (!$this.is(e.target) && $this.has(e.target).length === 0) {
+      //     $body.removeClass("has-overlay");
+      //     $this.removeClass("open");
+      // }
+
+    }
+
+    function closeModalBtn(e) {
+      $body.removeClass("has-overlay");
+      $this.removeClass("open");
+    }
+
+    if ($this.hasClass("default-open")) {
+      openModal();
+    }
+  });
+  return this;
+};
+
+$(document).ready(function () {
+  $(".modal").modal();
+});

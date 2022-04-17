@@ -4678,6 +4678,14 @@ dl.product-info dd {
   text-align: right;
 }
 
+.text-primary {
+  color: #3497fd;
+}
+
+.text-gray-dark {
+  color: #757575;
+}
+
 .d-flex {
   display: -webkit-box;
   display: -ms-flexbox;
