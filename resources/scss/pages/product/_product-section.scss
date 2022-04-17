@@ -1,0 +1,16 @@
+// Sections
+.product-section {
+    margin: 2.5rem 0;
+}
+
+.product-section__header {
+    margin-bottom: 1.1rem;
+    color: $primary-color;
+    font-weight: 500;
+    @include font-size(1.2rem);
+}
+
+.product-section__content--gray {
+    padding: 2rem 0;
+    background-color: #f0f4f8;
+}

@@ -1,0 +1,99 @@
+// Comments
+.comments-slider {
+    // margin-left: -1rem;
+    // margin-right: -1rem;
+
+    .slick-slide {
+        padding: 0.5rem;
+
+        @include mediaAbove(sm) {
+            padding: 0.75rem;
+        }
+        @include mediaAbove(md) {
+            padding: 1rem;
+        }
+        @include mediaAbove(lg) {
+            padding: 1.25rem;
+        }
+    }
+}
+
+.comment {
+    box-shadow: 0px 5px 30px rgba(27, 28, 32, 0.1);
+    border-radius: 1.25rem;
+    padding: 1.75rem;
+}
+
+.comment__author {
+    font-weight: 500;
+}
+
+.comment__rating {
+    margin: 0.75rem 0;
+}
+
+.comment__date {
+    margin-top: 2rem;
+    color: $primary-color;
+}
+
+// related products
+.relatedp-slider-wrapper {
+    position: relative;
+}
+
+.related-products-slider {
+    .slick-slide {
+        padding: 1rem;
+    }
+
+    @include mediaAbove(md) {
+        margin-right: -1rem;
+        margin-left: -1rem;
+    }
+}
+
+// Questions
+.product-question {
+    margin-bottom: 1.25rem;
+    .question-wrapper {
+        .author {
+            font-weight: 500;
+        }
+        .date {
+            margin: 0.25rem 0;
+            color: $gray-500;
+            font-size: 0.875rem;
+        }
+        .title {
+            color: #707070;
+        }
+    }
+
+    .answer-wrapper {
+        position: relative;
+        margin-top: 1rem;
+        padding: 1rem;
+        background-color: #f0f4f8;
+        border-radius: 0.5rem;
+        color: #07284a;
+        font-weight: 500;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -7px;
+            right: 2rem;
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 7px 7px 7px;
+            border-color: transparent transparent #f0f4f8 transparent;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}
