@@ -343,7 +343,7 @@
                     <div class="text-gray-dark mr-1" id="comments-modal-toggler" role="button">123 نظر</div>
                 </div>
 
-                <div role="button" class="btn btn--light">
+                <div role="button" class="btn btn--light" id="add-comment-toggler">
                     ثبت دیدگاه
                     <i class="icon icon-add"></i>
                 </div>
@@ -1139,6 +1139,67 @@
                 </div>
             </div>
         </footer>
+
+        <div class="modal add-comment-modal" data-toggler="#add-comment-toggler">
+            <div class="modal__dialog">
+                <form action="" method="post">
+                    <div class="modal__header">
+                        <div>نظر خود را درباره این کالا ثبت کنید</div>
+                        <div class="close js-modal-close" role="button"><i class="icon icon-cross"></i></div>
+                    </div>
+                    <div class="modal__body">
+                        <div class="form-group">
+                            <label for="fullname
+                            fullname" class="form-label is-required">نام و نام خانوادگی</label>
+                            <input type="text" class="form-control" name="fullname" id="fullname"
+                                placeholder="نام و نام خانوادگی" required></input>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email
+                            email" class="form-label is-required">ایمیل</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="ایمیل"
+                                required></input>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="body" class="form-label is-required">متن مورد نظر</label>
+                            <textarea class="form-control" name="body" id="body" rows="4" placeholder="متن مورد نظر"
+                                required></textarea>
+                        </div>
+
+                        <div class="form-group" id="js-rating-input-wrapper">
+                            <div class="d-flex">
+                                <label class="form-label is-required">امتیاز شما</label>
+                                <div class="js-rate-title text-primary mr-1">متوسط</div>
+                            </div>
+                            <div class="rate-control">
+                                <input class="checkbox js-rate-input" type="radio" name="rate" id="rate-1" value="1">
+                                <label class="checkbox-rate js-rate-label checked" for="rate-1"></label>
+
+                                <input class="checkbox js-rate-input" type="radio" name="rate" id="rate-2" value="2">
+                                <label class="checkbox-rate js-rate-label checked" for="rate-2"></label>
+
+                                <input class="checkbox js-rate-input" type="radio" name="rate" id="rate-3" value="3"
+                                    checked>
+                                <label class="checkbox-rate js-rate-label" for="rate-3"></label>
+
+                                <input class="checkbox js-rate-input" type="radio" name="rate" id="rate-4" value="4">
+                                <label class="checkbox-rate js-rate-label" for="rate-4"></label>
+
+                                <input class="checkbox js-rate-input" type="radio" name="rate" id="rate-5" value="5">
+                                <label class="checkbox-rate js-rate-label" for="rate-5"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal__footer">
+                        <div class="actions">
+                            <input type="submit" value="ثبت نظر" class="btn btn--small btn--primary">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
 
         <div class="modal comments-modal" data-toggler="#comments-modal-toggler">
             <div class="modal__dialog">

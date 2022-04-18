@@ -13,6 +13,13 @@ input.checkbox {
             border-color: $primary-color;
         }
     }
+
+    &:checked + label.checkbox-rate {
+        &::before {
+            content: "\e905";
+            color: $primary-color;
+        }
+    }
 }
 
 label.checkbox {
@@ -37,6 +44,24 @@ label.checkbox {
         cursor: pointer;
         &:before {
             border-color: $primary-color;
+        }
+    }
+}
+
+// rate checkbox
+label.checkbox-rate {
+    font-size: 18px;
+    cursor: pointer;
+    &::before {
+        content: "\e91e";
+        font-family: FamilaIcons;
+        color: $gray-500;
+    }
+
+    &.checked {
+        &::before {
+            content: "\e905";
+            color: $primary-color;
         }
     }
 }

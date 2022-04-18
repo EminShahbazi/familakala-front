@@ -1,1 +1,45 @@
 @import "checkbox";
+
+.form-group {
+    margin-bottom: 1rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.form-label {
+    color: $gray-800;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+
+    &.is-required {
+        &::after {
+            content: "*";
+            color: $danger-color;
+            margin-right: 0.25rem;
+            font-size: 1rem;
+        }
+    }
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid $gray-300;
+    border-radius: 0.25rem;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+        border-color: $primary-color;
+    }
+
+    &.invalid {
+        border-color: $danger-color;
+    }
+
+    &::placeholder {
+        font-size: 0.875rem;
+    }
+}

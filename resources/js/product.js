@@ -117,4 +117,5 @@ $(document).ready(function () {
 
     $("#product-info-tabs").tabs();
     $("#product-review-tabs").tabs();
+    $("#js-rating-input-wrapper").rateInput();
 });

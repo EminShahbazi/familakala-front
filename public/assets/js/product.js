@@ -105,4 +105,5 @@ $(document).ready(function () {
   }]), _$$slick));
   $("#product-info-tabs").tabs();
   $("#product-review-tabs").tabs();
+  $("#js-rating-input-wrapper").rateInput();
 });

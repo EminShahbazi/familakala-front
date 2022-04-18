@@ -124,6 +124,33 @@ jQuery.fn.modal = function () {
   return this;
 };
 
+jQuery.fn.rateInput = function () {
+  this.each(function () {
+    // Cache DOM
+    var $this = $(this);
+    var $title = $this.find(".js-rate-title");
+    var $inputs = $this.find(".js-rate-input");
+    var $labels = $this.find(".js-rate-label"); // helpers
+
+    var titles = ["خیلی بد", "بد", "متوسط", "خوب", "خیلی خوب"]; // Event Listners
+
+    $inputs.on("change", handleRateChange); // Event Handlers
+
+    function handleRateChange(e) {
+      var $input = $(e.target);
+      var value = parseInt($input.val());
+      $labels.removeClass("checked");
+
+      if (value > 1) {
+        $labels.slice(0, value).addClass("checked");
+      }
+
+      $title.text(titles[value - 1]);
+    }
+  });
+  return this;
+};
+
 $(document).ready(function () {
   $(".modal").modal();
 });

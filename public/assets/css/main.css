@@ -1186,6 +1186,11 @@ input.checkbox:checked + label.checkbox::before {
   border-color: #3497fd;
 }
 
+input.checkbox:checked + label.checkbox-rate::before {
+  content: "\e905";
+  color: #3497fd;
+}
+
 label.checkbox::before {
   content: "";
   display: inline-block;
@@ -1213,6 +1218,81 @@ label.checkbox:hover {
 
 label.checkbox:hover:before {
   border-color: #3497fd;
+}
+
+label.checkbox-rate {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+label.checkbox-rate::before {
+  content: "\e91e";
+  font-family: FamilaIcons;
+  color: #adb5bd;
+}
+
+label.checkbox-rate.checked::before {
+  content: "\e905";
+  color: #3497fd;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-label {
+  color: #343a40;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.form-label.is-required::after {
+  content: "*";
+  color: #f8353e;
+  margin-right: 0.25rem;
+  font-size: 1rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #3497fd;
+}
+
+.form-control.invalid {
+  border-color: #f8353e;
+}
+
+.form-control::-webkit-input-placeholder {
+  font-size: 0.875rem;
+}
+
+.form-control::-moz-placeholder {
+  font-size: 0.875rem;
+}
+
+.form-control:-ms-input-placeholder {
+  font-size: 0.875rem;
+}
+
+.form-control::-ms-input-placeholder {
+  font-size: 0.875rem;
+}
+
+.form-control::placeholder {
+  font-size: 0.875rem;
 }
 
 .row {
