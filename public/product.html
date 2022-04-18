@@ -1021,8 +1021,8 @@
             <div class="container">
                 <div class="product-section__header d-flex space-between align-center">
                     <h4>سوالات کاربران</h4>
-                    <div role="button" class="btn btn--light">
-                        ثبت دیدگاه
+                    <div role="button" class="btn btn--light" id="add-question-toggler">
+                        ثبت پرسش
                         <i class="icon icon-add"></i>
                     </div>
                 </div>
@@ -1195,6 +1195,43 @@
                     <div class="modal__footer">
                         <div class="actions">
                             <input type="submit" value="ثبت نظر" class="btn btn--small btn--primary">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal add-question-modal" data-toggler="#add-question-toggler">
+            <div class="modal__dialog">
+                <form action="" method="post">
+                    <div class="modal__header">
+                        <div>پرسش خود را درباره این کالا ثبت کنید</div>
+                        <div class="close js-modal-close" role="button"><i class="icon icon-cross"></i></div>
+                    </div>
+                    <div class="modal__body">
+                        <div class="form-group">
+                            <label for="fullname
+                            fullname" class="form-label is-required">نام و نام خانوادگی</label>
+                            <input type="text" class="form-control" name="fullname" id="fullname"
+                                placeholder="نام و نام خانوادگی" required></input>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email
+                            email" class="form-label is-required">ایمیل</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="ایمیل"
+                                required></input>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="body" class="form-label is-required">متن سوال</label>
+                            <textarea class="form-control" name="body" id="body" rows="4" placeholder="متن مورد نظر"
+                                required></textarea>
+                        </div>
+                    </div>
+                    <div class="modal__footer">
+                        <div class="actions">
+                            <input type="submit" value="ثبت پرسش" class="btn btn--small btn--primary">
                         </div>
                     </div>
                 </form>
