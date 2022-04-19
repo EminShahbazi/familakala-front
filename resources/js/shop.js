@@ -1,5 +1,6 @@
 const filterProducts = (function () {
     let page = 1;
+    let sortBy = null;
     let minPrice = null;
     let maxPrice = null;
     let brands = [];
@@ -16,6 +17,7 @@ const filterProducts = (function () {
 
     const $brandsInput = $("input.brand");
     const $colorsInput = $("input.color");
+    const $sortInput = $("input.sort");
 
     const $mobileFiltersToggler = $("#products-filters-toggler");
     const $mobileFilters = $("#products-filters");
@@ -25,6 +27,7 @@ const filterProducts = (function () {
     $priceButton.on("click", alterQueryString);
     $brandsInput.on("change", handleBrandChange);
     $colorsInput.on("change", handleColorChange);
+    $sortInput.on("change", handleSortChange);
 
     $mobileFiltersToggler.on("click", openFilters);
     $bodyMask.on("click", closeFilters);
@@ -90,6 +93,13 @@ const filterProducts = (function () {
         alterQueryString();
     }
 
+    function handleSortChange(e) {
+        sortBy = $(e.target).val();
+        page = 1;
+        $("#pl-orderby-modal").removeClass("open");
+        alterQueryString();
+    }
+
     function openFilters() {
         $body.addClass("has-overlay");
         $mobileFilters.addClass("open");
@@ -121,6 +131,10 @@ const filterProducts = (function () {
             if (maxPrice) {
                 query.push("max_price=" + maxPrice);
             }
+        }
+
+        if (sortBy) {
+            query.push("sort_by=" + sortBy);
         }
 
         if (brands.length) {

@@ -143,6 +143,9 @@
                         <div id="products-filters-toggler" class="btn btn--text btn--icon-right">
                             <i class="icon icon-filter"></i>فیلتر محصولات
                         </div>
+                        <div id="pl-orderby-toggler" class="btn btn--text btn--icon-right  mr-1">
+                            <i class="icon icon-filter"></i>مرتب سازی
+                        </div>
                     </div>
 
                     <div class="products-list-wrapper" id="products-list-wrapper">
@@ -925,6 +928,37 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal" data-toggler="#pl-orderby-toggler" id="pl-orderby-modal">
+        <div class="modal__dialog" style="max-width: 300px;">
+            <form action="" method="post">
+                <div class="modal__header">
+                    <div>مرتب سازی بر اساس</div>
+                    <div class="close js-modal-close" role="button"><i class="icon icon-cross"></i></div>
+                </div>
+                <div class="modal__body">
+                    <ul class="products-orderby-m">
+                        <li>
+                            <input type="radio" name="sort" value="date" id="date" class="checkbox sort">
+                            <label for="date" class="checkbox">جدیدترین</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="sort" value="price-dsc" id="price-dsc" class="checkbox sort">
+                            <label for="price-dsc" class="checkbox">گرانترین</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="sort" value="price-asc" id="price-asc" class="checkbox sort">
+                            <label for="price-asc" class="checkbox">ارزانترین</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="sort" value="popular" id="popular" class="checkbox sort">
+                            <label for="popular" class="checkbox">محبوب‌ترین</label>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <div class="mobile-menu" id="js-mobile-menu">
         <nav class="mobile-nav">

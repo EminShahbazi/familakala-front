@@ -2,6 +2,7 @@
 
 var filterProducts = function () {
   var page = 1;
+  var sortBy = null;
   var minPrice = null;
   var maxPrice = null;
   var brands = [];
@@ -15,6 +16,7 @@ var filterProducts = function () {
   var $priceButton = $("#price-filter-submit");
   var $brandsInput = $("input.brand");
   var $colorsInput = $("input.color");
+  var $sortInput = $("input.sort");
   var $mobileFiltersToggler = $("#products-filters-toggler");
   var $mobileFilters = $("#products-filters"); // Events
 
@@ -22,6 +24,7 @@ var filterProducts = function () {
   $priceButton.on("click", alterQueryString);
   $brandsInput.on("change", handleBrandChange);
   $colorsInput.on("change", handleColorChange);
+  $sortInput.on("change", handleSortChange);
   $mobileFiltersToggler.on("click", openFilters);
   $bodyMask.on("click", closeFilters); // Init
 
@@ -92,6 +95,13 @@ var filterProducts = function () {
     alterQueryString();
   }
 
+  function handleSortChange(e) {
+    sortBy = $(e.target).val();
+    page = 1;
+    $("#pl-orderby-modal").removeClass("open");
+    alterQueryString();
+  }
+
   function openFilters() {
     $body.addClass("has-overlay");
     $mobileFilters.addClass("open");
@@ -121,6 +131,10 @@ var filterProducts = function () {
       if (maxPrice) {
         query.push("max_price=" + maxPrice);
       }
+    }
+
+    if (sortBy) {
+      query.push("sort_by=" + sortBy);
     }
 
     if (brands.length) {

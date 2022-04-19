@@ -4276,6 +4276,15 @@ body.has-overlay .body-mask {
           transform: rotate(180deg);
 }
 
+ul.products-orderby-m {
+  list-style: none;
+  padding: 0;
+}
+
+ul.products-orderby-m li {
+  margin-bottom: 0.75rem;
+}
+
 .product-intro {
   position: relative;
 }
