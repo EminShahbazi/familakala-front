@@ -110,8 +110,10 @@ var filterProducts = function () {
   function closeFilters() {
     $mobileFilters.removeClass("open");
     $body.removeClass("has-overlay");
-  } // Helper Functions
+  } // Init
 
+
+  init(); // Helper Functions
 
   function alterQueryString() {
     var resetPage = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;

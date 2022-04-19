@@ -110,6 +110,9 @@ const filterProducts = (function () {
         $body.removeClass("has-overlay");
     }
 
+    // Init
+    init();
+
     // Helper Functions
     function alterQueryString(resetPage = true) {
         let query = [];
