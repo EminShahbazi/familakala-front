@@ -1087,6 +1087,10 @@ progress {
 }
 
 .breadcrumb {
+  margin: 2.5rem 0 2rem;
+}
+
+.breadcrumb ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1096,24 +1100,24 @@ progress {
   overflow-y: auto;
 }
 
-.breadcrumb li {
+.breadcrumb ul li {
   color: #748a9d;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-.breadcrumb li:not(:last-child) {
+.breadcrumb ul li:not(:last-child) {
   margin-left: 0.875rem;
 }
 
-.breadcrumb li:not(:last-child)::after {
+.breadcrumb ul li:not(:last-child)::after {
   content: "\e904";
   font-family: FamilaIcons;
   font-size: 0.75rem;
   margin-right: 0.875rem;
 }
 
-.breadcrumb li a {
+.breadcrumb ul li a {
   color: inherit;
 }
 
@@ -3151,7 +3155,12 @@ label.checkbox-rate.checked::before {
 }
 
 .page {
-  margin: 3rem 0;
+  margin-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.breadcrumb + .page {
+  margin-top: 1.5rem;
 }
 
 .site-footer {
