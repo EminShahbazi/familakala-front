@@ -15,10 +15,12 @@ var filterProducts = function () {
   var $priceMax = $("#price-filter-max");
   var $priceButton = $("#price-filter-submit");
   var $brandsInput = $("input.brand");
+  var $brandsLabels = $("label.brand");
   var $colorsInput = $("input.color");
   var $sortInput = $("input.sort");
   var $mobileFiltersToggler = $("#products-filters-toggler");
-  var $mobileFilters = $("#products-filters"); // Events
+  var $mobileFilters = $("#products-filters");
+  var $brandsSearch = $("#brands-search"); // Events
 
   $paginationLinks.on("click", changePage);
   $priceButton.on("click", alterQueryString);
@@ -26,7 +28,8 @@ var filterProducts = function () {
   $colorsInput.on("change", handleColorChange);
   $sortInput.on("change", handleSortChange);
   $mobileFiltersToggler.on("click", openFilters);
-  $bodyMask.on("click", closeFilters); // Init
+  $bodyMask.on("click", closeFilters);
+  $brandsSearch.on("keyup", searchBrands); // Init
 
   init();
 
@@ -110,10 +113,18 @@ var filterProducts = function () {
   function closeFilters() {
     $mobileFilters.removeClass("open");
     $body.removeClass("has-overlay");
-  } // Init
+  }
 
+  function searchBrands() {
+    var term = $(this).val();
+    var regex = new RegExp("^" + term, "i");
+    var $found = $brandsLabels.filter(function () {
+      return regex.test($(this).text());
+    });
+    $brandsLabels.not($found).hide();
+    $found.show();
+  } // Helper Functions
 
-  init(); // Helper Functions
 
   function alterQueryString() {
     var resetPage = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
