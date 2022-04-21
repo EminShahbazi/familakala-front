@@ -39,7 +39,6 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 320px;
     max-width: 100%;
     padding: 1rem;
     z-index: 999;
@@ -60,26 +59,14 @@
 }
 
 @include mediaAbove(lg) {
-    .products-page__content {
-        display: flex;
-    }
-
     .pl-mobile-actions {
         display: none;
     }
 
-    .products-page__main {
-        order: 2;
-    }
-
     .products-filters {
-        flex-shrink: 0;
         position: relative;
-        width: 320px;
         height: auto;
         padding: 0;
-        order: 1;
-        padding-left: 1rem;
         transform: none;
         z-index: auto;
     }

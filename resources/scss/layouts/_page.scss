@@ -6,3 +6,29 @@
 .breadcrumb + .page {
     margin-top: 1.5rem;
 }
+
+@include mediaAbove(lg) {
+    .page--has-sidebar {
+        display: flex;
+    }
+
+    .page__sidebar {
+        flex-shrink: 0;
+        position: relative;
+        width: 300px;
+        height: auto;
+        margin-right: 2rem;
+        margin-left: 0;
+    }
+
+    .page--sidebar-right {
+        .page__main {
+            order: 2;
+        }
+        .page__sidebar {
+            order: 1;
+            margin-left: 2rem;
+            margin-right: 0;
+        }
+    }
+}
