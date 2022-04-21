@@ -3,6 +3,15 @@
     padding-bottom: 2rem;
 }
 
+.page__main {
+    flex-grow: 1;
+    order: 1;
+}
+
+.page__sidebar {
+    order: 2;
+}
+
 .breadcrumb + .page {
     margin-top: 1.5rem;
 }
