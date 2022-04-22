@@ -3856,6 +3856,69 @@ body.has-overlay .body-mask {
   }
 }
 
+.checkbox.shipment-method {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.checkbox.shipment-method::before {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.checkbox.shipment-method .shipment-method__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.checkbox.shipment-method .shipment-method__inner .name,
+.checkbox.shipment-method .shipment-method__inner .delivery,
+.checkbox.shipment-method .shipment-method__inner .extra {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-bottom: 0.25rem;
+}
+
+.checkbox.shipment-method .shipment-method__inner .name {
+  font-weight: 500;
+  min-width: 88px;
+}
+
+.checkbox.shipment-method .shipment-method__inner .extra {
+  color: #757575;
+}
+
+@media (min-width: 576px) {
+  .checkbox.shipment-method .shipment-method__inner {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .checkbox.shipment-method .shipment-method__inner .name,
+  .checkbox.shipment-method .shipment-method__inner .delivery,
+  .checkbox.shipment-method .shipment-method__inner .extra {
+    width: auto;
+    -webkit-box-flex: unset;
+        -ms-flex-positive: unset;
+            flex-grow: unset;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-bottom: 0;
+  }
+  .checkbox.shipment-method .shipment-method__inner .delivery {
+    margin: 0 1rem;
+  }
+}
+
 .hero-slider-wrapper {
   margin: 30px 0;
 }
@@ -5114,9 +5177,18 @@ dl.product-info dd {
   margin-bottom: 1rem;
 }
 
+.ml-1 {
+  margin-left: 1rem;
+}
+
 .my-0 {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.mx-1 {
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .m-0 {
@@ -5165,10 +5237,21 @@ dl.product-info dd {
   display: flex;
 }
 
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .align-center {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.align-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .space-between {
@@ -5181,4 +5264,9 @@ dl.product-info dd {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+.flex-shrink-0 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }

@@ -1,0 +1,47 @@
+.checkbox.shipment-method {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+
+    &::before {
+        flex-shrink: 0;
+    }
+
+    .shipment-method__inner {
+        display: flex;
+        flex-wrap: wrap;
+        .name,
+        .delivery,
+        .extra {
+            width: 100%;
+            flex-grow: 1;
+            margin-bottom: 0.25rem;
+        }
+
+        .name {
+            font-weight: 500;
+            min-width: 88px;
+        }
+
+        .extra {
+            color: #757575;
+        }
+
+        @include mediaAbove(sm) {
+            flex-wrap: nowrap;
+
+            .name,
+            .delivery,
+            .extra {
+                width: auto;
+                flex-grow: unset;
+                flex-shrink: 0;
+                margin-bottom: 0;
+            }
+
+            .delivery {
+                margin: 0 1rem;
+            }
+        }
+    }
+}
