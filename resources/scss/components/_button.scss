@@ -17,8 +17,12 @@
 
     &.btn--icon-right {
         .icon {
-            margin-left: 0.25rem;
+            margin-left: 0.4rem;
         }
+    }
+
+    .icon-arrow-right-2 {
+        font-size: 0.75em;
     }
 }
 
@@ -45,6 +49,7 @@
     &:hover {
         background: darken($primary-color, 10);
         border-color: darken($primary-color, 10);
+        color: #ffffff;
     }
 }
 
