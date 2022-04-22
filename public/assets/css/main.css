@@ -3856,14 +3856,6 @@ body.has-overlay .body-mask {
   }
 }
 
-.checkout-address .address {
-  font-weight: 500;
-}
-
-.checkout-address .icon-arrow-left {
-  font-size: 0.6em;
-}
-
 .hero-slider-wrapper {
   margin: 30px 0;
 }
@@ -5149,6 +5141,22 @@ dl.product-info dd {
 
 .text-gray-dark {
   color: #757575;
+}
+
+.text-bold {
+  font-weight: 500;
+}
+
+.text-small {
+  font-size: 0.875rem;
+}
+
+.text-smaller {
+  font-size: 0.75rem;
+}
+
+.text-smallest {
+  font-size: 0.6rem;
 }
 
 .d-flex {
