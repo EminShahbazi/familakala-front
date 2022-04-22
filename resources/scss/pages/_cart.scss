@@ -26,6 +26,11 @@
             color: $primary-color;
         }
 
+        &.success {
+            background-color: #f0f4f8;
+            color: $success-color;
+        }
+
         &.failed {
             background-color: #f0f4f8;
             color: $danger-color;

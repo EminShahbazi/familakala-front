@@ -18,6 +18,10 @@
     color: #757575;
 }
 
+.text-success {
+    color: $success-color;
+}
+
 // weight
 .text-bold {
     font-weight: 500;
@@ -34,4 +38,8 @@
 
 .text-smallest {
     font-size: 0.6rem;
+}
+
+.text-large {
+    font-size: 1.2rem;
 }
