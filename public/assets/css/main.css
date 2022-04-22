@@ -991,10 +991,12 @@ progress {
 
 .btn .icon {
   vertical-align: middle;
+  margin-right: 0.4rem;
 }
 
 .btn.btn--icon-right .icon {
   margin-left: 0.4rem;
+  margin-right: 0;
 }
 
 .btn .icon-arrow-right-2 {
@@ -3571,7 +3573,8 @@ body.has-overlay .body-mask {
 }
 
 .cart-item,
-.cart-totals {
+.cart-totals,
+.cart-card {
   position: relative;
   padding: 1rem;
   background-color: #f0f4f8;
@@ -3579,7 +3582,8 @@ body.has-overlay .body-mask {
 }
 
 .cart-item:not(:last-child),
-.cart-totals:not(:last-child) {
+.cart-totals:not(:last-child),
+.cart-card:not(:last-child) {
   margin-bottom: 2rem;
 }
 
@@ -3850,6 +3854,14 @@ body.has-overlay .body-mask {
   .cart-item__details {
     padding-right: calc(200px + 2rem);
   }
+}
+
+.checkout-address .address {
+  font-weight: 500;
+}
+
+.checkout-address .icon-arrow-left {
+  font-size: 0.6em;
 }
 
 .hero-slider-wrapper {
