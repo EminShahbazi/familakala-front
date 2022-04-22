@@ -218,6 +218,16 @@
     .cart-item__details {
         padding-right: calc(160px + 2rem);
     }
+
+    .cart-item__title {
+        font-size: 1.2rem;
+    }
+
+    .cart-item__options {
+        div {
+            font-size: 1rem;
+        }
+    }
 }
 
 @include mediaAbove(xl) {
