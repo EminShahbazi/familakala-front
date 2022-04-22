@@ -45,3 +45,14 @@
         }
     }
 }
+
+.shipmet-date-tabs {
+    .tabs__header {
+        justify-content: space-between;
+        border-top: 0;
+    }
+
+    .tabs__header__item {
+        flex-grow: 1;
+    }
+}

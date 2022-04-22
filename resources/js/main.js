@@ -73,8 +73,8 @@ jQuery.fn.tabs = function () {
         $togglers.on("click", selectTab);
 
         // Event Handlers
-        function selectTab(e) {
-            const $this = $(e.target);
+        function selectTab() {
+            const $this = $(this);
             if ($this.hasClass("active")) {
                 return;
             }

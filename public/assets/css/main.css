@@ -3919,6 +3919,19 @@ body.has-overlay .body-mask {
   }
 }
 
+.shipmet-date-tabs .tabs__header {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 0;
+}
+
+.shipmet-date-tabs .tabs__header__item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 .hero-slider-wrapper {
   margin: 30px 0;
 }
@@ -5173,6 +5186,10 @@ dl.product-info dd {
   margin-right: 1rem;
 }
 
+.mb-half {
+  margin-bottom: 0.5rem;
+}
+
 .mb-1 {
   margin-bottom: 1rem;
 }
@@ -5184,6 +5201,11 @@ dl.product-info dd {
 .my-0 {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.mx-half {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
 }
 
 .mx-1 {
