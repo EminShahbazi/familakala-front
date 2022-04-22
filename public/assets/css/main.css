@@ -3572,8 +3572,6 @@ body.has-overlay .body-mask {
   margin-bottom: 0.625rem;
 }
 
-.cart-item,
-.cart-totals,
 .cart-card {
   position: relative;
   padding: 1rem;
@@ -3581,9 +3579,7 @@ body.has-overlay .body-mask {
   border-radius: 0.5rem;
 }
 
-.cart-item:not(:last-child),
-.cart-totals:not(:last-child),
-.cart-card:not(:last-child) {
+.cart-item:not(:last-child) {
   margin-bottom: 2rem;
 }
 
