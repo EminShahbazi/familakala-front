@@ -282,6 +282,13 @@
     }
 }
 
+@include mediaAbove(lg) {
+    .cart-totals {
+        position: sticky;
+        top: 1rem;
+    }
+}
+
 @include mediaAbove(xl) {
     .cart-item__thumb {
         width: 200px;

@@ -3824,6 +3824,13 @@ body.has-overlay .body-mask {
   }
 }
 
+@media (min-width: 992px) {
+  .cart-totals {
+    position: sticky;
+    top: 1rem;
+  }
+}
+
 @media (min-width: 1200px) {
   .cart-item__thumb {
     width: 200px;
