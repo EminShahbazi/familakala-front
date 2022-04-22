@@ -5250,6 +5250,10 @@ dl.product-info dd {
   color: #98ad0a;
 }
 
+.text-danger {
+  color: #f8353e;
+}
+
 .text-bold {
   font-weight: 500;
 }
