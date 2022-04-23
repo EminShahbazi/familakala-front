@@ -1,9 +1,14 @@
+.login-modal {
+    .modal__body {
+        color: #07284a;
+    }
+}
+
 .login-terms {
     margin-top: 2rem;
 }
 
 .login-form__link {
-    color: #07284a;
     font-size: 0.875rem;
     transition: color 0.3s ease;
 
@@ -17,5 +22,21 @@
         font-size: 0.5em;
         margin-right: 0.5rem;
         vertical-align: middle;
+    }
+}
+
+.login__otp-control {
+    direction: ltr;
+    display: flex;
+    justify-content: space-between;
+    width: 265px;
+    margin: 0 auto;
+
+    .form-control {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 1.4rem;
     }
 }
