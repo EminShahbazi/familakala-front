@@ -1306,6 +1306,12 @@ label.checkbox-rate.checked::before {
   font-size: 0.875rem;
 }
 
+.form-control--light {
+  border: 1px solid #f0f4f8;
+  border-radius: 0.5rem;
+  background-color: #f0f4f8;
+}
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2120,7 +2126,7 @@ label.checkbox-rate.checked::before {
 }
 
 .modal__dialog {
-  margin: 1rem;
+  margin: 2rem 1rem;
   background-color: #ffffff;
   border-radius: 0.5rem;
   -webkit-transform: translate(0, -50px);
@@ -2131,7 +2137,7 @@ label.checkbox-rate.checked::before {
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 
-@media (min-width: 0) {
+@media (min-width: 576px) {
   .modal__dialog {
     margin: 2rem auto;
     max-width: 600px;
@@ -2152,6 +2158,10 @@ label.checkbox-rate.checked::before {
   border-bottom: 1px solid #dee2e6;
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+.modal__header.modal__header--borderless {
+  border-bottom: 0;
 }
 
 .modal__header .close {
@@ -4580,6 +4590,29 @@ body.has-overlay .body-mask {
   margin-right: 8px;
 }
 
+.login-terms {
+  margin-top: 2rem;
+}
+
+.login-form__link {
+  color: #07284a;
+  font-size: 0.875rem;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.login-form__link:hover {
+  color: #3497fd;
+}
+
+.login-form__link::after {
+  content: "\e904";
+  font-family: FamilaIcons;
+  font-size: 0.5em;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
 .products-guide {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5210,6 +5243,16 @@ dl.product-info dd {
 .my-0 {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.my-1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .mx-half {

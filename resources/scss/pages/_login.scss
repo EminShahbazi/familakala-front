@@ -1,0 +1,21 @@
+.login-terms {
+    margin-top: 2rem;
+}
+
+.login-form__link {
+    color: #07284a;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: $primary-color;
+    }
+
+    &::after {
+        content: "\e904";
+        font-family: FamilaIcons;
+        font-size: 0.5em;
+        margin-right: 0.5rem;
+        vertical-align: middle;
+    }
+}

@@ -36,7 +36,7 @@
                     </ul>
                 </nav>
                 <div class="header-actions">
-                    <div class="header-actions__item" role="button">
+                    <div id="login-toggler" class="header-actions__item" role="button">
                         <i class="icon icon-account"></i>
                     </div>
                     <div class="header-actions__item" role="button">
@@ -1222,6 +1222,35 @@
                 </div>
             </div>
         </nav>
+    </div>
+
+    <div class="modal login-modal open" data-toggler="#login-toggler">
+        <div class="modal__dialog" style="max-width: 380px;">
+            <div class="modal__header modal__header--borderless">
+                <div>ورود</div>
+                <div class="close js-modal-close" role="button"><i class="icon icon-cross"></i></div>
+            </div>
+            <div class="modal__body">
+                <form method="POST" class="login-form">
+                    <div class="form-group">
+                        <label for="phone" class="form-label is-required">شماره همراه</label>
+                        <input type="text" name="phone" id="phone" class="form-control form-control--light"
+                            placeholder="09xxxxxxxxx">
+                    </div>
+
+                    <div class="login-form__link mt-2" role="button">ورود با رمز عبور</div>
+
+                    <div class="my-2">
+                        <input type="submit" value="ورود" class="btn btn--primary btn--rounded btn--block">
+                    </div>
+                    <p class="login-terms text-small text-center text-gray-dark">با ورود به فامیلاکالا <a href="">شرایط
+                            فامیلاکالا</a> و
+                        <a href="">قوانین حریم
+                            خصوصی</a> آن را می پذیرید.
+                    </p>
+                </form>
+            </div>
+        </div>
     </div>
 
     <div class="body-mask" id="js-body-mask"></div>

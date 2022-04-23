@@ -24,14 +24,14 @@
 }
 
 .modal__dialog {
-    margin: 1rem;
+    margin: 2rem 1rem;
     background-color: $white;
     border-radius: 0.5rem;
 
     transform: translate(0, -50px);
     transition: transform 0.3s ease-out;
 
-    @include mediaAbove(xs) {
+    @include mediaAbove(sm) {
         margin: 2rem auto;
         max-width: 600px;
     }
@@ -47,6 +47,10 @@
     border-bottom: 1px solid $gray-300;
     font-size: 1.2rem;
     font-weight: 500;
+
+    &.modal__header--borderless {
+        border-bottom: 0;
+    }
 
     .close {
         font-size: 0.75rem;

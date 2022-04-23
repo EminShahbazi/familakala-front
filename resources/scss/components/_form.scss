@@ -29,6 +29,7 @@
     padding: 0.5rem;
     border: 1px solid $gray-300;
     border-radius: 0.25rem;
+
     transition: border-color 0.3s ease;
 
     &:focus {
@@ -42,4 +43,10 @@
     &::placeholder {
         font-size: 0.875rem;
     }
+}
+
+.form-control--light {
+    border: 1px solid #f0f4f8;
+    border-radius: 0.5rem;
+    background-color: #f0f4f8;
 }
