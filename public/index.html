@@ -1224,14 +1224,14 @@
         </nav>
     </div>
 
-    <div class="modal login-modal open" data-toggler="#login-toggler">
+    <div class="modal login-modal" data-toggler="#login-toggler">
         <div class="modal__dialog" style="max-width: 380px;">
             <div class="modal__header modal__header--borderless">
                 <div>ورود</div>
                 <div class="close js-modal-close" role="button"><i class="icon icon-cross"></i></div>
             </div>
             <div class="modal__body">
-                <div id="login-otp" style="display: none;">
+                <div id="login-otp">
                     <form method="POST" class="login-form">
                         <div class="form-group">
                             <label for="phone" class="form-label is-required">شماره همراه</label>
@@ -1281,7 +1281,7 @@
                     </form>
                 </div>
 
-                <div id="login-otp-verify">
+                <div id="login-otp-verify" style="display: none;">
                     <p class="text-center"> کد تایید برای شماره موبایل <span class="">09351082211</span> ارسال گردید.
                     </p>
 
