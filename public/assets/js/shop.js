@@ -34,6 +34,7 @@ var filterProducts = function () {
   init();
 
   function init() {
+    sortBy = $sortInput.filter(":checked").val();
     minPrice = $priceMin.data("value");
     maxPrice = $priceMax.data("value");
 

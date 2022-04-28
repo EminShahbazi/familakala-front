@@ -1318,14 +1318,14 @@ label.checkbox-rate.checked::before {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
 }
 
 .col {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  padding: 0.5rem;
+  padding: 0.75rem;
 }
 
 .col-1 {
@@ -2769,8 +2769,8 @@ label.checkbox-rate.checked::before {
   width: 95%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
 }
 
 @media (min-width: 576px) {
@@ -2786,7 +2786,7 @@ label.checkbox-rate.checked::before {
   }
   .container-md {
     margin: 0 auto;
-    padding: 0 0.5rem;
+    padding: 0 0.75rem;
   }
 }
 
@@ -2798,7 +2798,7 @@ label.checkbox-rate.checked::before {
   }
   .container-lg {
     margin: 0 auto;
-    padding: 0 0.5rem;
+    padding: 0 0.75rem;
   }
 }
 
@@ -2811,7 +2811,7 @@ label.checkbox-rate.checked::before {
   }
   .container-xl {
     margin: 0 auto;
-    padding: 0 0.5rem;
+    padding: 0 0.75rem;
   }
 }
 
