@@ -45,13 +45,13 @@ var pageLoading = function () {
   var $pageLoading = $("#js-page-loading"); // Functions
 
   function show() {
-    $body.addClass("has-overlay");
-    $pageLoading.show();
+    $body.addClass("no-scroll");
+    $pageLoading.addClass("open");
   }
 
   function hide() {
-    $pageLoading.hide();
-    $body.removeClass("has-overlay");
+    $pageLoading.removeClass("open");
+    $body.removeClass("no-scroll");
   }
 
   return {

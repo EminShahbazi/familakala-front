@@ -182,7 +182,8 @@ var filterProducts = function () {
           scrollTop: $productsListWrapper.offset().top
         }, 500);
       },
-      complete: function complete() {// pageLoading.hide();
+      complete: function complete() {
+        pageLoading.hide();
       }
     });
   }
