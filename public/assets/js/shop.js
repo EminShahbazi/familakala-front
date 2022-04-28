@@ -107,13 +107,13 @@ var filterProducts = function () {
   }
 
   function openFilters() {
-    $body.addClass("has-overlay");
+    $body.addClass("no-scroll show-mask");
     $mobileFilters.addClass("open");
   }
 
   function closeFilters() {
     $mobileFilters.removeClass("open");
-    $body.removeClass("has-overlay");
+    $body.removeClass("no-scroll show-mask");
   }
 
   function searchBrands() {
