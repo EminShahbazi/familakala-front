@@ -4,8 +4,7 @@
     justify-content: space-between;
     margin-bottom: 1.5rem;
     border-top: 1px solid #d6d6d6;
-    border-bottom: 1px solid #d6d6d6;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: visible;
 
     -ms-overflow-style: none; /* Internet Explorer 10+ */
@@ -17,6 +16,15 @@
     @include mediaAbove(md) {
         justify-content: flex-start;
     }
+
+    &::after {
+        content: "";
+        align-self: flex-end;
+        display: block;
+        height: 100%;
+        flex-grow: 1;
+        border-bottom: 1px solid #d6d6d6;
+    }
 }
 
 .tabs__header__item {
@@ -24,33 +32,22 @@
     padding: 0.75rem 1.5rem;
     text-align: center;
     flex-shrink: 0;
+    border-bottom: 1px solid #d6d6d6;
 
     @include mediaAbove(sm) {
         flex-shrink: unset;
     }
 
     &.active {
-        // border-bottom: 1px solid red;
+        margin: 0 0.5rem;
         font-weight: 500;
-
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: -1px;
-            right: 0;
-            height: 1px;
-            width: 100%;
-            background-color: $primary-color;
-            border-color: $white;
-            border-style: solid;
-            border-width: 0 0.5rem;
-            z-index: 2;
+        border-bottom-color: $primary-color;
+        &:first-child {
+            margin-right: 0;
         }
 
-        &:first-child {
-            &::after {
-                border-right-width: 0;
-            }
+        &:last-child {
+            margin-left: 0;
         }
     }
 }
