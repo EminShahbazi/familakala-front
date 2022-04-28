@@ -1,0 +1,24 @@
+body {
+    &.no-scroll {
+        overflow: hidden !important;
+    }
+}
+body.has-overlay {
+    overflow: hidden;
+    height: 100vh;
+
+    .body-mask {
+        display: block;
+    }
+}
+
+.body-mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($black, 0.6);
+    z-index: 990;
+}

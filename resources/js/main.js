@@ -102,13 +102,13 @@ jQuery.fn.modal = function () {
 
         // Event Handlers
         function openModal() {
-            $body.addClass("has-overlay");
+            $body.addClass("no-scroll");
             $this.addClass("open");
         }
 
         function closeModal(e) {
             if (e.target === e.currentTarget) {
-                $body.removeClass("has-overlay");
+                $body.removeClass("no-scroll");
                 $this.removeClass("open");
             }
             // if (!$this.is(e.target) && $this.has(e.target).length === 0) {

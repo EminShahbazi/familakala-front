@@ -191,7 +191,7 @@ const filterProducts = (function () {
                 );
             },
             complete: function () {
-                pageLoading.hide();
+                // pageLoading.hide();
             },
         });
     }
