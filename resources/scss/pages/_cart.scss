@@ -36,7 +36,12 @@
             color: $danger-color;
         }
 
-        @include mediaAbove(340px) {
+        @include mediaAbove(360px) {
+            padding: 0.4rem 1.6rem;
+            border-radius: 2rem;
+        }
+
+        @include mediaAbove(380px) {
             padding: 0.7rem 1.8rem;
             border-radius: 2.25rem;
         }

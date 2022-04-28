@@ -4,6 +4,8 @@
     margin-bottom: 1.5rem;
     border-top: 1px solid #d6d6d6;
     border-bottom: 1px solid #d6d6d6;
+    overflow-y: hidden;
+    overflow-x: auto;
 
     @include mediaAbove(md) {
         justify-content: flex-start;
@@ -14,6 +16,11 @@
     position: relative;
     padding: 0.75rem 1.5rem;
     text-align: center;
+    flex-shrink: 0;
+
+    @include mediaAbove(sm) {
+        flex-shrink: unset;
+    }
 
     &.active {
         // border-bottom: 1px solid red;

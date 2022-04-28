@@ -2526,6 +2526,8 @@ label.checkbox-rate.checked::before {
   margin-bottom: 1.5rem;
   border-top: 1px solid #d6d6d6;
   border-bottom: 1px solid #d6d6d6;
+  overflow-y: hidden;
+  overflow-x: auto;
 }
 
 @media (min-width: 768px) {
@@ -2540,6 +2542,15 @@ label.checkbox-rate.checked::before {
   position: relative;
   padding: 0.75rem 1.5rem;
   text-align: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+@media (min-width: 576px) {
+  .tabs__header__item {
+    -ms-flex-negative: unset;
+        flex-shrink: unset;
+  }
 }
 
 .tabs__header__item.active {
@@ -2741,8 +2752,10 @@ label.checkbox-rate.checked::before {
 
 .container {
   width: 95%;
-  margin: 0 auto;
-  padding: 0 0.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 @media (min-width: 576px) {
@@ -2797,7 +2810,7 @@ label.checkbox-rate.checked::before {
 }
 
 .topbar {
-  padding: 1.5rem;
+  padding: 1.5rem 0;
   background-color: #f0f4f8;
   color: #8e9092;
   text-align: center;
@@ -3134,11 +3147,11 @@ label.checkbox-rate.checked::before {
 }
 
 .header-cat__image {
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   text-align: center;
-  line-height: 65px;
+  line-height: 60px;
 }
 
 .header-cat__image img {
@@ -3149,6 +3162,14 @@ label.checkbox-rate.checked::before {
   font-size: 28px;
   line-height: inherit;
   color: #3497fd;
+}
+
+@media (min-width: 360px) {
+  .header-cat__image {
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+  }
 }
 
 @media (min-width: 576px) {
@@ -3569,7 +3590,14 @@ body.has-overlay .body-mask {
   color: #f8353e;
 }
 
-@media (min-width: 340px) {
+@media (min-width: 360px) {
+  .order-process li {
+    padding: 0.4rem 1.6rem;
+    border-radius: 2rem;
+  }
+}
+
+@media (min-width: 380px) {
   .order-process li {
     padding: 0.7rem 1.8rem;
     border-radius: 2.25rem;
@@ -3983,7 +4011,7 @@ body.has-overlay .body-mask {
 
 .discounts-slider-prev,
 .discounts-slider-next {
-  display: none;
+  display: none !important;
   position: absolute;
   top: 50%;
   color: #b7b7b7;
@@ -4012,7 +4040,7 @@ body.has-overlay .body-mask {
 @media (min-width: 576px) {
   .discounts-slider-prev,
   .discounts-slider-next {
-    display: block;
+    display: block !important;
   }
 }
 
@@ -5229,6 +5257,10 @@ dl.product-info dd {
 
 .product-video-actions .icon {
   font-size: 1.4rem;
+}
+
+.relatedp-slider-wrapper .discounts-slider-next {
+  left: 0;
 }
 
 .mt-half {

@@ -1,5 +1,5 @@
 .topbar {
-    padding: 1.5rem;
+    padding: 1.5rem 0;
     background-color: #f0f4f8;
     color: #8e9092;
     text-align: center;
@@ -268,11 +268,11 @@
 }
 
 .header-cat__image {
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     text-align: center;
-    line-height: 65px;
+    line-height: 60px;
 
     img {
         max-width: 75%;
@@ -282,6 +282,12 @@
         font-size: 28px;
         line-height: inherit;
         color: $primary-color;
+    }
+
+    @include mediaAbove(360px) {
+        width: 65px;
+        height: 65px;
+        line-height: 65px;
     }
 
     @include mediaAbove(sm) {
