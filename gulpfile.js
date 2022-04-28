@@ -50,7 +50,7 @@ task("js", () => {
 
 // Build Tasks
 task("moveImages", () => {
-    return src(["public/assets/images/**.*", "public/uploads/**.*"], {
+    return src(["public/assets/images/**.*", "public/uploads/**/**.*"], {
         base: "public",
     }).pipe(dest("build"));
 });
