@@ -1,11 +1,18 @@
 .tabs__header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     margin-bottom: 1.5rem;
     border-top: 1px solid #d6d6d6;
     border-bottom: 1px solid #d6d6d6;
-    overflow-y: hidden;
-    overflow-x: auto;
+    overflow-y: scroll;
+    overflow-x: visible;
+
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+    }
 
     @include mediaAbove(md) {
         justify-content: flex-start;
@@ -37,6 +44,7 @@
             border-color: $white;
             border-style: solid;
             border-width: 0 0.5rem;
+            z-index: 2;
         }
 
         &:first-child {

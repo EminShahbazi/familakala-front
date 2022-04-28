@@ -2517,6 +2517,7 @@ label.checkbox-rate.checked::before {
 }
 
 .tabs__header {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2526,8 +2527,17 @@ label.checkbox-rate.checked::before {
   margin-bottom: 1.5rem;
   border-top: 1px solid #d6d6d6;
   border-bottom: 1px solid #d6d6d6;
-  overflow-y: hidden;
-  overflow-x: auto;
+  overflow-y: scroll;
+  overflow-x: visible;
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.tabs__header::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
 }
 
 @media (min-width: 768px) {
@@ -2568,6 +2578,7 @@ label.checkbox-rate.checked::before {
   border-color: #ffffff;
   border-style: solid;
   border-width: 0 0.5rem;
+  z-index: 2;
 }
 
 .tabs__header__item.active:first-child::after {
