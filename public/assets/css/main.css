@@ -979,12 +979,11 @@ body.no-scroll {
   overflow: hidden !important;
 }
 
-body.has-overlay {
-  overflow: hidden;
+body.show-mask {
   height: 100vh;
 }
 
-body.has-overlay .body-mask {
+body.show-mask .body-mask {
   display: block;
 }
 

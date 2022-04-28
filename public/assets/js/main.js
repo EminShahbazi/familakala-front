@@ -14,13 +14,13 @@ var mobileMenu = function () {
   $bodyMask.on("click", closeMenu); // Event Handles
 
   function openMenu() {
-    $body.addClass("has-overlay");
+    $body.addClass("no-scroll show-mask");
     $menu.addClass("open");
   }
 
   function closeMenu() {
     $menu.removeClass("open");
-    $body.removeClass("has-overlay");
+    $body.removeClass("no-scroll show-mask");
   }
 
   function openMenuItem(event) {
@@ -105,15 +105,11 @@ jQuery.fn.modal = function () {
       if (e.target === e.currentTarget) {
         $body.removeClass("no-scroll");
         $this.removeClass("open");
-      } // if (!$this.is(e.target) && $this.has(e.target).length === 0) {
-      //     $body.removeClass("has-overlay");
-      //     $this.removeClass("open");
-      // }
-
+      }
     }
 
     function closeModalBtn(e) {
-      $body.removeClass("has-overlay");
+      $body.removeClass("no-scroll");
       $this.removeClass("open");
     }
 
