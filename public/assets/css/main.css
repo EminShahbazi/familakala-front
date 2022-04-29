@@ -2122,6 +2122,10 @@ label.checkbox-rate.checked::before {
   content: "\e92a";
 }
 
+.icon-share2:before {
+  content: "\e92b";
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -4959,44 +4963,8 @@ label.product-option--color .color {
           box-shadow: 0 3px 6px rgba 0, 0, 0, 0.16;
 }
 
-@media (min-width: 576px) {
-  .product-features {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    margin-top: 0;
-  }
-  .product-features__item {
-    display: block;
-  }
-  .product-features__item .icon {
-    margin-left: 0;
-  }
-}
-
-@media (min-width: 992px) {
-  .product-intro {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .product-slider {
-    width: 45%;
-    margin-left: 3rem;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-  }
-  .product-info {
-    width: 55%;
-  }
-  .product-options,
-  .product-title {
-    margin-left: 65px;
-  }
-}
-
 .product-slider {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5004,6 +4972,31 @@ label.product-option--color .color {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 30px;
+}
+
+.product-actions {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media (min-width: 992px) {
+  .product-actions {
+    right: unset;
+    left: 0;
+  }
+}
+
+.product-actions__item {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  color: #748a9d;
+  -webkit-transform: color 0.3s ease;
+          transform: color 0.3s ease;
+}
+
+.product-actions__item:hover, .product-actions__item.active {
+  color: #3497fd;
 }
 
 .product-nav-slider-wrapper {
@@ -5090,6 +5083,43 @@ label.product-option--color .color {
 
 .product-nav-slider-arrow.slick-disabled {
   color: #d7d7d7;
+}
+
+@media (min-width: 576px) {
+  .product-features {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-top: 0;
+  }
+  .product-features__item {
+    display: block;
+  }
+  .product-features__item .icon {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .product-intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .product-slider {
+    width: 45%;
+    margin-left: 3rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .product-info {
+    width: 55%;
+  }
+  .product-options,
+  .product-title {
+    margin-left: 65px;
+  }
 }
 
 .product-section {
