@@ -4978,6 +4978,7 @@ label.product-option--color .color {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 9;
 }
 
 @media (min-width: 992px) {
