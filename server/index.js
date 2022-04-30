@@ -16,6 +16,16 @@ app.post("/login/otp", (req, res) => {
     res.status(200).end();
 });
 
+app.post("/login/otp-verify", (req, res) => {
+    const { phone, code } = req.body;
+
+    if (code !== "12345") {
+        return res.status(400).send({ code: "کد وارد شده اشتباه است." });
+    }
+
+    return res.status(200).end();
+});
+
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 });

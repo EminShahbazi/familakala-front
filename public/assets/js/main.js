@@ -148,17 +148,31 @@ var pageLoading = function () {
 }();
 
 var login = function () {
-  // State
-  var phoneNumber = null; // Catche DOM
+  // constants
+  var duration = 120; // State
+
+  var phoneNumber = null;
+  var timeLeft = duration;
+  var timer; // Catche DOM
 
   var $modal = $("#login-modal");
   var $otpScreen = $modal.find("#login-otp");
-  var $otpVerifyScreen = $modal.find("#login-otp-verify");
-  var $passScreen = $modal.find("#login-pass");
   var $otpForm = $otpScreen.find(".login-form");
-  var $otpPhoneInput = $otpForm.find("#phone"); // Events
+  var $otpPhoneInput = $otpForm.find("#phone");
+  var $otpVerifyScreen = $modal.find("#login-otp-verify");
+  var $otpVerifyForm = $otpVerifyScreen.find(".login-form");
+  var $otpPhoneNumber = $otpVerifyForm.find("#otpv-phone");
+  var $otpVerifyInputs = $otpVerifyForm.find(".js-otpv-control");
+  var $optVerifyTimer = $otpVerifyForm.find("#otpv-timer-wrapper");
+  var $optVerifyCountdown = $optVerifyTimer.find("#otpv-timer");
+  var $optVerifyResend = $otpVerifyForm.find("#otpv-resend");
+  var $passScreen = $modal.find("#login-pass"); // Events
 
-  $otpForm.on("submit", submitOtp); // Event Listners
+  $otpForm.on("submit", submitOtp);
+  $otpVerifyForm.on("submit", submitOtpVerify);
+  $otpVerifyInputs.on("keyup", goToNextCodeInput);
+  $optVerifyResend.on("click", resendCode); // $otpVerifyInputs.on("keydown", onlyOneChar);
+  // Event Listners
 
   function submitOtp(e) {
     e.preventDefault();
@@ -171,8 +185,10 @@ var login = function () {
       contentType: "application/json",
       method: "POST",
       success: function success() {
+        $otpPhoneNumber.text(phoneNumber);
         $otpScreen.hide();
         $otpVerifyScreen.show();
+        startTimer();
       },
       error: function error(xhr) {
         var errors = JSON.parse(xhr.responseText);
@@ -181,10 +197,102 @@ var login = function () {
           $otpPhoneInput.addClass("invalid");
           $otpPhoneInput.next(".form-feedback").text(errors.phone);
         }
-
-        console.log();
       }
     });
+  } // startTimer();
+
+
+  function submitOtpVerify(e) {
+    e.preventDefault();
+    var code = "";
+    $otpVerifyInputs.each(function () {
+      code += $(this).val();
+    });
+
+    if (code.length !== 5) {
+      $otpVerifyInputs.addClass("invalid");
+      return;
+    }
+
+    $.ajax({
+      url: "/api/login/otp-verify",
+      data: JSON.stringify({
+        phone: phoneNumber,
+        code: code
+      }),
+      contentType: "application/json",
+      method: "POST",
+      success: function success() {
+        location.reload();
+      },
+      error: function error(xhr) {
+        var errors = JSON.parse(xhr.responseText);
+        $otpVerifyInputs.addClass("invalid");
+
+        if (errors.code) {
+          $otpVerifyForm.find(".form-feedback").text(errors.code);
+        }
+      }
+    });
+  }
+
+  function resendCode(e) {
+    $.ajax({
+      url: "/api/login/otp",
+      data: JSON.stringify({
+        phone: phoneNumber
+      }),
+      contentType: "application/json",
+      method: "POST",
+      success: function success() {
+        $otpVerifyInputs.val("").removeClass("invalid");
+        $otpVerifyForm.find(".form-feedback").text("").hide();
+        resetTimer();
+      },
+      error: function error(xhr) {}
+    });
+  }
+
+  function goToNextCodeInput(e) {
+    var keyCode = e.which;
+    var $this = $(this);
+
+    if (keyCode == 8 || keyCode == 46) {
+      $this.prev(".js-otpv-control").focus();
+    } else if (keyCode == 9) {
+      $this.select();
+    } else if (this.value.length == this.maxLength) {
+      $this.next(".js-otpv-control").focus();
+    }
+
+    e.preventDefault();
+  } // UI functions
+
+
+  function startTimer() {
+    timer = setInterval(function () {
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        $optVerifyTimer.hide();
+        $optVerifyResend.show();
+      }
+
+      $optVerifyCountdown.html(getTimeLeft());
+      timeLeft = timeLeft - 1;
+    }, 1000);
+  }
+
+  function resetTimer() {
+    timeLeft = duration;
+    clearInterval(timer);
+    $optVerifyCountdown.html(getTimeLeft());
+    $optVerifyResend.hide();
+    $optVerifyTimer.show();
+    startTimer();
+  }
+
+  function getTimeLeft() {
+    return new Date(timeLeft * 1000).toISOString().substr(14, 5);
   }
 }();
 

@@ -1283,26 +1283,42 @@
                 </div>
 
                 <div id="login-otp-verify" style="display: none;">
-                    <p class="text-center"> کد تایید برای شماره موبایل <span class="">09351082211</span> ارسال گردید.
-                    </p>
+                    <form method="POST" class="login-form">
 
-                    <p class="mt-2 text-gray-dark text-center ">ورود رمز عبور یکبار مصرف</p>
+                        <p class="text-center"> کد تایید برای شماره موبایل <span id="otpv-phone"></span>
+                            ارسال
+                            گردید.
+                        </p>
 
-                    <div class="login__otp-control my-1">
-                        <input class="form-control form-control--light" type="text" name="otp-code-1">
-                        <input class="form-control form-control--light" type="text" name="otp-code-1">
-                        <input class="form-control form-control--light" type="text" name="otp-code-1">
-                        <input class="form-control form-control--light" type="text" name="otp-code-1">
-                        <input class="form-control form-control--light" type="text" name="otp-code-1">
-                    </div>
+                        <p class="mt-2 text-gray-dark text-center ">ورود رمز عبور یکبار مصرف</p>
 
-                    <p class="text-center text-small"> ارسال مجدد تا <span class="">01:43</span> دیگر</p>
+                        <div class="login__otp-control my-1">
+                            <input class="js-otpv-control form-control form-control--light" type="text"
+                                name="otp-code-1" maxlength="1">
+                            <input class="js-otpv-control form-control form-control--light" type="text"
+                                name="otp-code-2" maxlength="1">
+                            <input class="js-otpv-control form-control form-control--light" type="text"
+                                name="otp-code-6" maxlength="1">
+                            <input class="js-otpv-control form-control form-control--light" type="text"
+                                name="otp-code-4" maxlength="1">
+                            <input class="js-otpv-control form-control form-control--light" type="text"
+                                name="otp-code-5" maxlength="1">
+                        </div>
+                        <div class="form-feedback text-center"></div>
 
-                    <div class="login-form__link mt-2" role="button">ورود با رمز عبور</div>
+                        <p class="text-center text-small mt-1" id="otpv-timer-wrapper"> ارسال مجدد تا <span
+                                id="otpv-timer">02:00</span>
+                            دیگر</p>
+                        <p id="otpv-resend" class="text-center mt-1 text-primary" role="button" style="display: none;">
+                            ارسال
+                            مجدد کد</p>
 
-                    <div class="my-2">
-                        <input type="submit" value="ورود" class="btn btn--primary btn--rounded btn--block">
-                    </div>
+                        <div class="login-form__link mt-2" role="button">ورود با رمز عبور</div>
+
+                        <div class="my-2">
+                            <input type="submit" value="ورود" class="btn btn--primary btn--rounded btn--block">
+                        </div>
+                    </form>
                 </div>
 
             </div>
