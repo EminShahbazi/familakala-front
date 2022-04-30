@@ -165,18 +165,24 @@ var login = function () {
     phoneNumber = $otpPhoneInput.val();
     $.ajax({
       url: "/api/login/otp",
-      data: {
-        phone: phoneNumber,
-        another: "test"
-      },
-      dataType: "json",
+      data: JSON.stringify({
+        phone: phoneNumber
+      }),
+      contentType: "application/json",
       method: "POST",
       success: function success() {
         $otpScreen.hide();
         $otpVerifyScreen.show();
       },
-      error: function error(err) {
-        console.log(err);
+      error: function error(xhr) {
+        var errors = JSON.parse(xhr.responseText);
+
+        if (errors.phone) {
+          $otpPhoneInput.addClass("invalid");
+          $otpPhoneInput.next(".form-feedback").text(errors.phone);
+        }
+
+        console.log();
       }
     });
   }

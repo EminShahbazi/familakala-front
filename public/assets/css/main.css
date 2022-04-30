@@ -1335,6 +1335,16 @@ label.checkbox-rate.checked::before {
   background-color: #f0f4f8;
 }
 
+.form-control--light.invalid {
+  background-color: #ffeeef;
+}
+
+.form-feedback {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #f8353e;
+}
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -9,7 +9,8 @@ const jsmin = require("gulp-uglify");
 const gulpIf = require("gulp-if");
 const rev = require("gulp-rev");
 const revReplace = require("gulp-rev-replace");
-const { mocks } = require("./resources/mocks");
+const url = require("url");
+var proxy = require("proxy-middleware");
 const { task, src, dest, watch, series } = gulp;
 
 const path = {
@@ -84,14 +85,12 @@ task("build", series(["moveImages", "moveFonts", "rev", "revReplace"]));
 
 // Default Task
 exports.default = function () {
+    var proxyOptions = url.parse("http://localhost:3001/");
+    proxyOptions.route = "/api";
+    console.log(proxyOptions);
     browserSync.init({
         server: "./public",
-        middleware: function (req, res, next) {
-            if (mocks[req.url]) {
-                mocks[req.url](req, res);
-            }
-            next();
-        },
+        middleware: proxy(proxyOptions),
     });
 
     watch(path.scss.src, series(["scss"]));

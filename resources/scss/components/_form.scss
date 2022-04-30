@@ -49,4 +49,14 @@
     border: 1px solid #f0f4f8;
     border-radius: 0.5rem;
     background-color: #f0f4f8;
+
+    &.invalid {
+        background-color: $danger-color-light;
+    }
+}
+
+.form-feedback {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: $danger-color;
 }

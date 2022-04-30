@@ -179,15 +179,20 @@ const login = (function () {
 
         $.ajax({
             url: "/api/login/otp",
-            data: { phone: phoneNumber, another: "test" },
+            data: JSON.stringify({ phone: phoneNumber }),
             contentType: "application/json",
             method: "POST",
             success: function () {
                 $otpScreen.hide();
                 $otpVerifyScreen.show();
             },
-            error: function (err) {
-                console.log(err);
+            error: function (xhr) {
+                const errors = JSON.parse(xhr.responseText);
+                if (errors.phone) {
+                    $otpPhoneInput.addClass("invalid");
+                    $otpPhoneInput.next(".form-feedback").text(errors.phone);
+                }
+                console.log();
             },
         });
     }
