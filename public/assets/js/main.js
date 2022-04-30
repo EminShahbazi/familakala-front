@@ -171,13 +171,14 @@ var login = function () {
   var $passScreenToggler = $modal.find(".js-login-pass-toggler");
   var $passScreen = $modal.find("#login-pass");
   var $passScreenForm = $modal.find(".login-form");
-  var $passScreenPhoneInput = $passScreenForm.find("phonenumber");
-  var $passScreenPassInput = $passScreenForm.find("password");
+  var $passScreenPhoneInput = $passScreenForm.find("#phonenumber");
+  var $passScreenPassInput = $passScreenForm.find("#password");
   var $passScreenFeedback = $passScreenForm.find("#login-pass-feedback"); // Events
 
   $otpForm.on("submit", submitOtp);
   $otpVerifyForm.on("submit", submitOtpVerify);
   $optVerifyResend.on("click", resendCode);
+  $passScreenForm.on("submit", submitPass);
   $otpScreenToggler.on("click", showOtpScreen);
   $passScreenToggler.on("click", showPassScreen);
   $otpVerifyInputs.on("keyup", goToNextCodeInput); // $otpVerifyInputs.on("keydown", onlyOneChar);
@@ -258,6 +259,33 @@ var login = function () {
         resetTimer();
       },
       error: function error(xhr) {}
+    });
+  }
+
+  function submitPass(e) {
+    e.preventDefault();
+    var phone = $passScreenPhoneInput.val();
+    var password = $passScreenPassInput.val();
+    console.log(phone);
+    console.log(password);
+    $.ajax({
+      url: "/api/login/password",
+      data: JSON.stringify({
+        phone: phone,
+        password: password
+      }),
+      contentType: "application/json",
+      method: "POST",
+      success: function success() {
+        location.reload();
+      },
+      error: function error(xhr) {
+        var error = xhr.responseText;
+
+        if (error) {
+          $passScreenFeedback.text(error).show();
+        }
+      }
     });
   }
 
