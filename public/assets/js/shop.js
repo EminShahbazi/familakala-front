@@ -171,7 +171,7 @@ var filterProducts = function () {
   function getProducts(querystring) {
     pageLoading.show();
     $.ajax({
-      url: "/API_PATH" + location.pathname + querystring,
+      url: "/api/products" + location.pathname + querystring,
       success: function success(data) {
         // set new HTML data
         $productsListWrapper.html(data.products); // attach event listner for the new pagination links

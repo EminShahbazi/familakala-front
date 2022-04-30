@@ -176,7 +176,7 @@ const filterProducts = (function () {
         pageLoading.show();
 
         $.ajax({
-            url: "/API_PATH" + location.pathname + querystring,
+            url: "/api/products" + location.pathname + querystring,
             success: function (data) {
                 // set new HTML data
                 $productsListWrapper.html(data.products);
