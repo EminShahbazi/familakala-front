@@ -1231,7 +1231,7 @@
                 <div class="close js-modal-close" role="button"><i class="icon icon-cross"></i></div>
             </div>
             <div class="modal__body">
-                <div id="login-otp">
+                <div class="login-modal__screen js-login-screen" id="login-otp">
                     <form method="POST" class="login-form">
                         <div class="form-group">
                             <label for="phone" class="form-label is-required">شماره همراه</label>
@@ -1240,7 +1240,7 @@
                             <div class="form-feedback"></div>
                         </div>
 
-                        <div class="login-form__link mt-2" role="button">ورود با رمز عبور</div>
+                        <div class="login-form__link mt-2 js-login-pass-toggler" role="button">ورود با رمز عبور</div>
 
                         <div class="my-2">
                             <input type="submit" value="ورود" class="btn btn--primary btn--rounded btn--block">
@@ -1254,7 +1254,7 @@
                     </form>
                 </div>
 
-                <div id="login-pass" style="display: none;">
+                <div class="login-modal__screen js-login-screen" id="login-pass" style="display: none;">
                     <form method="POST" class="login-form">
                         <div class="form-group">
                             <label for="phonenumber" class="form-label is-required">شماره همراه</label>
@@ -1267,8 +1267,10 @@
                                 class="form-control form-control--light" placeholder="رمز عبور">
                         </div>
 
-                        <div class="login-form__link mt-2" role="button">ورود با رمز یکبار مصرف</div>
-                        <div class="login-form__link mt-half" role="button">بازیابی رمز عبور</div>
+                        <div class="form-feedback" id="login-pass-feedback"></div>
+
+                        <div class="login-form__link mt-2 js-login-otp-toggler" role="button">ورود با رمز یکبار مصرف
+                        </div>
 
                         <div class="my-2">
                             <input type="submit" value="ورود" class="btn btn--primary btn--rounded btn--block">
@@ -1282,7 +1284,7 @@
                     </form>
                 </div>
 
-                <div id="login-otp-verify" style="display: none;">
+                <div class="login-modal__screen js-login-screen" id="login-otp-verify" style="display: none;">
                     <form method="POST" class="login-form">
 
                         <p class="text-center"> کد تایید برای شماره موبایل <span id="otpv-phone"></span>
@@ -1313,7 +1315,7 @@
                             ارسال
                             مجدد کد</p>
 
-                        <div class="login-form__link mt-2" role="button">ورود با رمز عبور</div>
+                        <div class="login-form__link mt-2 js-login-pass-toggler" role="button">ورود با رمز عبور</div>
 
                         <div class="my-2">
                             <input type="submit" value="ورود" class="btn btn--primary btn--rounded btn--block">

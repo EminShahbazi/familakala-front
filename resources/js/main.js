@@ -166,7 +166,9 @@ const login = (function () {
 
     // Catche DOM
     const $modal = $("#login-modal");
+    const $screens = $modal.find(".js-login-screen");
 
+    const $otpScreenToggler = $modal.find(".js-login-otp-toggler");
     const $otpScreen = $modal.find("#login-otp");
     const $otpForm = $otpScreen.find(".login-form");
     const $otpPhoneInput = $otpForm.find("#phone");
@@ -179,13 +181,21 @@ const login = (function () {
     const $optVerifyCountdown = $optVerifyTimer.find("#otpv-timer");
     const $optVerifyResend = $otpVerifyForm.find("#otpv-resend");
 
+    const $passScreenToggler = $modal.find(".js-login-pass-toggler");
     const $passScreen = $modal.find("#login-pass");
+    const $passScreenForm = $modal.find(".login-form");
+    const $passScreenPhoneInput = $passScreenForm.find("phonenumber");
+    const $passScreenPassInput = $passScreenForm.find("password");
+    const $passScreenFeedback = $passScreenForm.find("#login-pass-feedback");
 
     // Events
     $otpForm.on("submit", submitOtp);
     $otpVerifyForm.on("submit", submitOtpVerify);
-    $otpVerifyInputs.on("keyup", goToNextCodeInput);
     $optVerifyResend.on("click", resendCode);
+
+    $otpScreenToggler.on("click", showOtpScreen);
+    $passScreenToggler.on("click", showPassScreen);
+    $otpVerifyInputs.on("keyup", goToNextCodeInput);
 
     // $otpVerifyInputs.on("keydown", onlyOneChar);
 
@@ -214,7 +224,6 @@ const login = (function () {
             },
         });
     }
-    // startTimer();
 
     function submitOtpVerify(e) {
         e.preventDefault();
@@ -261,6 +270,22 @@ const login = (function () {
             },
             error: function (xhr) {},
         });
+    }
+
+    function showPassScreen() {
+        $passScreenPhoneInput.removeClass("invalid").val("");
+        $passScreenPassInput.removeClass("invalid").val("");
+        $passScreenFeedback.text("").hide();
+        $screens.hide();
+        $passScreen.show();
+    }
+
+    function showOtpScreen() {
+        phoneNumber = null;
+        $otpPhoneInput.removeClass("invalid").val("");
+        $otpPhoneInput.next(".form-feedback").text("").hide();
+        $screens.hide();
+        $otpScreen.show();
     }
 
     function goToNextCodeInput(e) {

@@ -156,6 +156,8 @@ var login = function () {
   var timer; // Catche DOM
 
   var $modal = $("#login-modal");
+  var $screens = $modal.find(".js-login-screen");
+  var $otpScreenToggler = $modal.find(".js-login-otp-toggler");
   var $otpScreen = $modal.find("#login-otp");
   var $otpForm = $otpScreen.find(".login-form");
   var $otpPhoneInput = $otpForm.find("#phone");
@@ -166,12 +168,19 @@ var login = function () {
   var $optVerifyTimer = $otpVerifyForm.find("#otpv-timer-wrapper");
   var $optVerifyCountdown = $optVerifyTimer.find("#otpv-timer");
   var $optVerifyResend = $otpVerifyForm.find("#otpv-resend");
-  var $passScreen = $modal.find("#login-pass"); // Events
+  var $passScreenToggler = $modal.find(".js-login-pass-toggler");
+  var $passScreen = $modal.find("#login-pass");
+  var $passScreenForm = $modal.find(".login-form");
+  var $passScreenPhoneInput = $passScreenForm.find("phonenumber");
+  var $passScreenPassInput = $passScreenForm.find("password");
+  var $passScreenFeedback = $passScreenForm.find("#login-pass-feedback"); // Events
 
   $otpForm.on("submit", submitOtp);
   $otpVerifyForm.on("submit", submitOtpVerify);
-  $otpVerifyInputs.on("keyup", goToNextCodeInput);
-  $optVerifyResend.on("click", resendCode); // $otpVerifyInputs.on("keydown", onlyOneChar);
+  $optVerifyResend.on("click", resendCode);
+  $otpScreenToggler.on("click", showOtpScreen);
+  $passScreenToggler.on("click", showPassScreen);
+  $otpVerifyInputs.on("keyup", goToNextCodeInput); // $otpVerifyInputs.on("keydown", onlyOneChar);
   // Event Listners
 
   function submitOtp(e) {
@@ -199,8 +208,7 @@ var login = function () {
         }
       }
     });
-  } // startTimer();
-
+  }
 
   function submitOtpVerify(e) {
     e.preventDefault();
@@ -251,6 +259,22 @@ var login = function () {
       },
       error: function error(xhr) {}
     });
+  }
+
+  function showPassScreen() {
+    $passScreenPhoneInput.removeClass("invalid").val("");
+    $passScreenPassInput.removeClass("invalid").val("");
+    $passScreenFeedback.text("").hide();
+    $screens.hide();
+    $passScreen.show();
+  }
+
+  function showOtpScreen() {
+    phoneNumber = null;
+    $otpPhoneInput.removeClass("invalid").val("");
+    $otpPhoneInput.next(".form-feedback").text("").hide();
+    $screens.hide();
+    $otpScreen.show();
   }
 
   function goToNextCodeInput(e) {
