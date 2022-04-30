@@ -9,7 +9,7 @@ const jsmin = require("gulp-uglify");
 const gulpIf = require("gulp-if");
 const rev = require("gulp-rev");
 const revReplace = require("gulp-rev-replace");
-
+const { mocks } = require("./resources/mocks");
 const { task, src, dest, watch, series } = gulp;
 
 const path = {
@@ -86,6 +86,12 @@ task("build", series(["moveImages", "moveFonts", "rev", "revReplace"]));
 exports.default = function () {
     browserSync.init({
         server: "./public",
+        middleware: function (req, res, next) {
+            if (mocks[req.url]) {
+                mocks[req.url](req, res);
+            }
+            next();
+        },
     });
 
     watch(path.scss.src, series(["scss"]));

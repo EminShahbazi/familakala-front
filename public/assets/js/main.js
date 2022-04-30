@@ -1,65 +1,5 @@
 "use strict";
 
-var $body = $(document.body);
-var $bodyMask = $("#js-body-mask");
-
-var mobileMenu = function () {
-  // Cache DOM
-  var $menuToggler = $("#js-mobile-menu-toggler");
-  var $menu = $("#js-mobile-menu");
-  var $togglers = $menu.find(".mobile-nav-item .heading"); // Event Listners
-
-  $menuToggler.on("click", openMenu);
-  $togglers.on("click", openMenuItem);
-  $bodyMask.on("click", closeMenu); // Event Handles
-
-  function openMenu() {
-    $body.addClass("no-scroll show-mask");
-    $menu.addClass("open");
-  }
-
-  function closeMenu() {
-    $menu.removeClass("open");
-    $body.removeClass("no-scroll show-mask");
-  }
-
-  function openMenuItem(event) {
-    $(event.target).parent(".mobile-nav-item").toggleClass("active");
-  }
-}();
-
-var headerCats = function () {
-  // Cache DOM
-  var $container = $("#js-header-cats");
-  var $toggler = $container.find("#js-header-cats-toggler"); // EventListners
-
-  $toggler.on("click", toggleCats); // Event Handlers
-
-  function toggleCats(e) {
-    $container.toggleClass("show-all");
-  }
-}();
-
-var pageLoading = function () {
-  // Cache DOM
-  var $pageLoading = $("#js-page-loading"); // Functions
-
-  function show() {
-    $body.addClass("no-scroll");
-    $pageLoading.addClass("open");
-  }
-
-  function hide() {
-    $pageLoading.removeClass("open");
-    $body.removeClass("no-scroll");
-  }
-
-  return {
-    show: show,
-    hide: hide
-  };
-}();
-
 jQuery.fn.tabs = function () {
   this.each(function () {
     // cache DOM
@@ -146,6 +86,101 @@ jQuery.fn.rateInput = function () {
   });
   return this;
 };
+
+var $body = $(document.body);
+var $bodyMask = $("#js-body-mask");
+
+var mobileMenu = function () {
+  // Cache DOM
+  var $menuToggler = $("#js-mobile-menu-toggler");
+  var $menu = $("#js-mobile-menu");
+  var $togglers = $menu.find(".mobile-nav-item .heading"); // Event Listners
+
+  $menuToggler.on("click", openMenu);
+  $togglers.on("click", openMenuItem);
+  $bodyMask.on("click", closeMenu); // Event Handles
+
+  function openMenu() {
+    $body.addClass("no-scroll show-mask");
+    $menu.addClass("open");
+  }
+
+  function closeMenu() {
+    $menu.removeClass("open");
+    $body.removeClass("no-scroll show-mask");
+  }
+
+  function openMenuItem(event) {
+    $(event.target).parent(".mobile-nav-item").toggleClass("active");
+  }
+}();
+
+var headerCats = function () {
+  // Cache DOM
+  var $container = $("#js-header-cats");
+  var $toggler = $container.find("#js-header-cats-toggler"); // EventListners
+
+  $toggler.on("click", toggleCats); // Event Handlers
+
+  function toggleCats(e) {
+    $container.toggleClass("show-all");
+  }
+}();
+
+var pageLoading = function () {
+  // Cache DOM
+  var $pageLoading = $("#js-page-loading"); // Functions
+
+  function show() {
+    $body.addClass("no-scroll");
+    $pageLoading.addClass("open");
+  }
+
+  function hide() {
+    $pageLoading.removeClass("open");
+    $body.removeClass("no-scroll");
+  }
+
+  return {
+    show: show,
+    hide: hide
+  };
+}();
+
+var login = function () {
+  // State
+  var phoneNumber = null; // Catche DOM
+
+  var $modal = $("#login-modal");
+  var $otpScreen = $modal.find("#login-otp");
+  var $otpVerifyScreen = $modal.find("#login-otp-verify");
+  var $passScreen = $modal.find("#login-pass");
+  var $otpForm = $otpScreen.find(".login-form");
+  var $otpPhoneInput = $otpForm.find("#phone"); // Events
+
+  $otpForm.on("submit", submitOtp); // Event Listners
+
+  function submitOtp(e) {
+    e.preventDefault();
+    phoneNumber = $otpPhoneInput.val();
+    $.ajax({
+      url: "/api/login/otp",
+      data: {
+        phone: phoneNumber,
+        another: "test"
+      },
+      dataType: "json",
+      method: "POST",
+      success: function success() {
+        $otpScreen.hide();
+        $otpVerifyScreen.show();
+      },
+      error: function error(err) {
+        console.log(err);
+      }
+    });
+  }
+}();
 
 $(document).ready(function () {
   $(".modal").modal();

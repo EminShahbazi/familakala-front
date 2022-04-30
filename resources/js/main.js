@@ -1,67 +1,3 @@
-const $body = $(document.body);
-const $bodyMask = $("#js-body-mask");
-
-const mobileMenu = (function () {
-    // Cache DOM
-    const $menuToggler = $("#js-mobile-menu-toggler");
-    const $menu = $("#js-mobile-menu");
-    const $togglers = $menu.find(".mobile-nav-item .heading");
-
-    // Event Listners
-    $menuToggler.on("click", openMenu);
-    $togglers.on("click", openMenuItem);
-    $bodyMask.on("click", closeMenu);
-
-    // Event Handles
-    function openMenu() {
-        $body.addClass("no-scroll show-mask");
-        $menu.addClass("open");
-    }
-
-    function closeMenu() {
-        $menu.removeClass("open");
-        $body.removeClass("no-scroll show-mask");
-    }
-
-    function openMenuItem(event) {
-        $(event.target).parent(".mobile-nav-item").toggleClass("active");
-    }
-})();
-const headerCats = (function () {
-    // Cache DOM
-    const $container = $("#js-header-cats");
-    const $toggler = $container.find("#js-header-cats-toggler");
-
-    // EventListners
-    $toggler.on("click", toggleCats);
-
-    // Event Handlers
-    function toggleCats(e) {
-        $container.toggleClass("show-all");
-    }
-})();
-
-const pageLoading = (function () {
-    // Cache DOM
-    const $pageLoading = $("#js-page-loading");
-
-    // Functions
-    function show() {
-        $body.addClass("no-scroll");
-        $pageLoading.addClass("open");
-    }
-
-    function hide() {
-        $pageLoading.removeClass("open");
-        $body.removeClass("no-scroll");
-    }
-
-    return {
-        show: show,
-        hide: hide,
-    };
-})();
-
 jQuery.fn.tabs = function () {
     this.each(function () {
         // cache DOM
@@ -154,6 +90,108 @@ jQuery.fn.rateInput = function () {
 
     return this;
 };
+
+const $body = $(document.body);
+const $bodyMask = $("#js-body-mask");
+
+const mobileMenu = (function () {
+    // Cache DOM
+    const $menuToggler = $("#js-mobile-menu-toggler");
+    const $menu = $("#js-mobile-menu");
+    const $togglers = $menu.find(".mobile-nav-item .heading");
+
+    // Event Listners
+    $menuToggler.on("click", openMenu);
+    $togglers.on("click", openMenuItem);
+    $bodyMask.on("click", closeMenu);
+
+    // Event Handles
+    function openMenu() {
+        $body.addClass("no-scroll show-mask");
+        $menu.addClass("open");
+    }
+
+    function closeMenu() {
+        $menu.removeClass("open");
+        $body.removeClass("no-scroll show-mask");
+    }
+
+    function openMenuItem(event) {
+        $(event.target).parent(".mobile-nav-item").toggleClass("active");
+    }
+})();
+const headerCats = (function () {
+    // Cache DOM
+    const $container = $("#js-header-cats");
+    const $toggler = $container.find("#js-header-cats-toggler");
+
+    // EventListners
+    $toggler.on("click", toggleCats);
+
+    // Event Handlers
+    function toggleCats(e) {
+        $container.toggleClass("show-all");
+    }
+})();
+
+const pageLoading = (function () {
+    // Cache DOM
+    const $pageLoading = $("#js-page-loading");
+
+    // Functions
+    function show() {
+        $body.addClass("no-scroll");
+        $pageLoading.addClass("open");
+    }
+
+    function hide() {
+        $pageLoading.removeClass("open");
+        $body.removeClass("no-scroll");
+    }
+
+    return {
+        show: show,
+        hide: hide,
+    };
+})();
+
+const login = (function () {
+    // State
+    let phoneNumber = null;
+
+    // Catche DOM
+    const $modal = $("#login-modal");
+
+    const $otpScreen = $modal.find("#login-otp");
+    const $otpVerifyScreen = $modal.find("#login-otp-verify");
+    const $passScreen = $modal.find("#login-pass");
+
+    const $otpForm = $otpScreen.find(".login-form");
+    const $otpPhoneInput = $otpForm.find("#phone");
+
+    // Events
+    $otpForm.on("submit", submitOtp);
+
+    // Event Listners
+    function submitOtp(e) {
+        e.preventDefault();
+        phoneNumber = $otpPhoneInput.val();
+
+        $.ajax({
+            url: "/api/login/otp",
+            data: { phone: phoneNumber, another: "test" },
+            contentType: "application/json",
+            method: "POST",
+            success: function () {
+                $otpScreen.hide();
+                $otpVerifyScreen.show();
+            },
+            error: function (err) {
+                console.log(err);
+            },
+        });
+    }
+})();
 
 $(document).ready(function () {
     $(".modal").modal();
